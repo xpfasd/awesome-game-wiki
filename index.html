@@ -1,0 +1,1074 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=" />
+  <title>Awesome Game Wiki</title>
+  <meta name="description" content="A curated collection of game wikis, databases, guides, esports references, modding documentation, and community knowledge hubs." />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08090c;
+      --panel: #11141a;
+      --panel-soft: #151922;
+      --text: #f1eee8;
+      --muted: #b8afa5;
+      --dim: #7f786f;
+      --line: rgba(255, 255, 255, 0.11);
+      --accent: #e45a43;
+      --accent-soft: rgba(228, 90, 67, 0.14);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(228, 90, 67, 0.14), transparent 28rem),
+        linear-gradient(180deg, #0b0d12 0%, var(--bg) 38rem);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration-color: rgba(228, 90, 67, 0.55); text-underline-offset: 0.18em; }
+    a:hover { color: #ffbead; }
+
+    .site-shell {
+      display: grid;
+      gap: 1.1rem;
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 1rem 1rem 3rem;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      gap: 0.75rem;
+      padding: 0.85rem 0;
+      background: linear-gradient(180deg, rgba(8, 9, 12, 0.96), rgba(8, 9, 12, 0.78));
+      backdrop-filter: blur(18px);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      min-width: 0;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border: 1px solid rgba(228, 90, 67, 0.5);
+      border-radius: 8px;
+      color: #fff0ea;
+      background: linear-gradient(145deg, rgba(228, 90, 67, 0.3), rgba(228, 90, 67, 0.07));
+      font-family: Georgia, serif;
+    }
+
+    .entry-count {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .search-input {
+      width: 100%;
+      min-height: 46px;
+      padding: 0.7rem 0.85rem;
+      border: 1px solid rgba(228, 90, 67, 0.45);
+      border-radius: 8px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.045);
+      font: inherit;
+    }
+
+    .hero,
+    .intro-card,
+    .toc,
+    .content-section,
+    .footer {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(17, 20, 26, 0.74);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.24);
+    }
+
+    .hero { padding: clamp(1.35rem, 4vw, 3rem); }
+    .eyebrow, .intro-card strong, .best-for strong { color: #ff9f8b; }
+    .eyebrow { margin: 0 0 0.55rem; font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0; }
+
+    h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: 0; }
+    h1 { max-width: 820px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.2rem, 7vw, 4.9rem); }
+    h2 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.35rem, 3vw, 2.05rem); }
+    h3 { font-size: 1rem; }
+
+    .intro-card, .toc, .content-section, .footer { padding: 1rem; }
+    .intro-card p, .content-section p, .footer p { margin: 0.7rem 0 0; color: var(--muted); }
+
+    .toc { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .toc a {
+      display: inline-flex;
+      padding: 0.35rem 0.55rem;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 0.84rem;
+      text-decoration: none;
+    }
+
+    .content-section { display: grid; gap: 0.8rem; scroll-margin-top: 8rem; }
+    .content-section > h2 { padding-bottom: 0.45rem; border-bottom: 1px solid var(--line); }
+
+    .entry-card {
+      display: grid;
+      gap: 0.6rem;
+      padding: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.018));
+    }
+
+    .entry-card h3 a { color: #fff3ec; text-decoration: none; }
+    .entry-card h3 a:hover { color: #ffbead; }
+    .entry-card p { margin: 0; }
+    .description { color: #d9d1c8; }
+    .best-for {
+      padding-top: 0.55rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: #c7beb4;
+      font-size: 0.94rem;
+    }
+
+    ul { margin: 0.75rem 0 0; padding-left: 1.2rem; color: var(--muted); }
+    hr { width: 100%; height: 1px; border: 0; background: var(--line); }
+    code { padding: 0.12rem 0.28rem; border-radius: 5px; color: #ffd7cc; background: rgba(228, 90, 67, 0.12); }
+
+    .hidden { display: none; }
+    .footer { color: var(--dim); font-size: 0.9rem; }
+
+    @media (min-width: 760px) {
+      .site-shell { padding: 1.2rem 1.4rem 4rem; }
+      .topbar { grid-template-columns: minmax(240px, 0.65fr) minmax(320px, 1fr); align-items: center; }
+      .entry-card { padding: 1.05rem 1.15rem; }
+      .intro-card, .toc, .content-section, .footer { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="topbar" aria-label="Page tools">
+      <div class="brand-row">
+        <div class="brand"><span class="brand-mark">AG</span><span>Awesome Game Wiki</span></div>
+        <span class="entry-count" id="entryCount">126 entries</span>
+      </div>
+      <input id="searchInput" class="search-input" type="search" placeholder="Search game wikis, guide hubs, databases, categories..." autocomplete="off" />
+    </nav>
+    <header class="hero"><p class="eyebrow">Curated game knowledge resources</p><h1>Awesome Game Wiki</h1></header>
+<div class="intro-card">
+<p>A curated, English-language collection of 126 game wiki, database, guide, and community knowledge websites. This document is written in an &quot;awesome list&quot; style, but with fuller descriptions so each entry explains what the site is best used for.</p>
+<p><strong>Last reviewed:</strong> 2026-05-14</p>
+<p><strong>Scope:</strong> Official wikis, independent community wikis, wiki.gg sites, Fandom-hosted references, esports databases, and a small number of non-wiki game knowledge sites that function like reference hubs.</p>
+<p><strong>Reading note:</strong> Live-service games, early-access games, and esports ecosystems change quickly. Treat each site as a starting point, then verify patch-sensitive details against current in-game text or official patch notes when precision matters.</p>
+</div>
+    <nav class="toc" aria-label="Section navigation">
+      <a href="#selection-principles">Selection Principles</a>
+<a href="#multi-game-reference-and-technical-fixes">Multi-game reference and technical fixes</a>
+<a href="#multi-game-walkthrough-wiki">Multi-game walkthrough wiki</a>
+<a href="#unused-and-hidden-game-content">Unused and hidden game content</a>
+<a href="#legacy-guide-archive-and-community-faqs">Legacy guide archive and community FAQs</a>
+<a href="#game-credits-and-release-database">Game credits and release database</a>
+<a href="#game-metadata-database">Game metadata database</a>
+<a href="#mods-total-conversions-and-community-projects">Mods, total conversions, and community projects</a>
+<a href="#modding-documentation-and-tools">Modding documentation and tools</a>
+<a href="#spoiler-light-player-advice">Spoiler-light player advice</a>
+<a href="#speedrunning-leaderboards-and-route-knowledge">Speedrunning leaderboards and route knowledge</a>
+<a href="#guide-focused-wiki-network">Guide-focused wiki network</a>
+<a href="#game-database-and-editorial-reference">Game database and editorial reference</a>
+<a href="#sandbox-and-survival">Sandbox and survival</a>
+<a href="#life-sim-and-farming">Life sim and farming</a>
+<a href="#colony-simulation-and-roguelike-systems">Colony simulation and roguelike systems</a>
+<a href="#automation-and-factory-management">Automation and factory management</a>
+<a href="#colony-simulation-and-story-generation">Colony simulation and story generation</a>
+<a href="#colony-simulation-and-thermodynamics">Colony simulation and thermodynamics</a>
+<a href="#survival-and-crafting">Survival and crafting</a>
+<a href="#survival-simulation">Survival simulation</a>
+<a href="#survival-taming-and-crafting">Survival, taming, and crafting</a>
+<a href="#survival-and-exploration">Survival and exploration</a>
+<a href="#survival-exploration">Survival exploration</a>
+<a href="#survival-crafting">Survival crafting</a>
+<a href="#sandbox-adventure">Sandbox adventure</a>
+<a href="#exploration-and-automation-sandbox">Exploration and automation sandbox</a>
+<a href="#survival-crafting-and-creature-collection">Survival crafting and creature collection</a>
+<a href="#survival-rpg-and-building">Survival RPG and building</a>
+<a href="#survival-action-rpg">Survival action RPG</a>
+<a href="#simulation-and-collaborative-survival">Simulation and collaborative survival</a>
+<a href="#sandbox-mining-adventure">Sandbox mining adventure</a>
+<a href="#survival-crafting-2">Survival crafting</a>
+<a href="#survival-simulation-2">Survival simulation</a>
+<a href="#open-world-squad-rpg">Open-world squad RPG</a>
+<a href="#roguelike-indie-and-action">Roguelike, indie, and action</a>
+<a href="#metroidvania-and-action-adventure">Metroidvania and action adventure</a>
+<a href="#precision-platformer">Precision platformer</a>
+<a href="#roguelite-action-platformer">Roguelite action platformer</a>
+<a href="#roguelike-shooter">Roguelike shooter</a>
+<a href="#roguelike-dungeon-crawler">Roguelike dungeon crawler</a>
+<a href="#roguelike-deckbuilder">Roguelike deckbuilder</a>
+<a href="#roguelike-strategy">Roguelike strategy</a>
+<a href="#tactical-roguelike">Tactical roguelike</a>
+<a href="#bullet-heaven-and-roguelite">Bullet heaven and roguelite</a>
+<a href="#bullet-hell-roguelike">Bullet-hell roguelike</a>
+<a href="#platforming-roguelike">Platforming roguelike</a>
+<a href="#roguelite-platformer">Roguelite platformer</a>
+<a href="#tactical-roguelike-rpg">Tactical roguelike RPG</a>
+<a href="#action-roguelite-and-colony-management">Action roguelite and colony management</a>
+<a href="#action-roguelike">Action roguelike</a>
+<a href="#metroidvania-and-platform-adventure">Metroidvania and platform adventure</a>
+<a href="#run-and-gun-and-boss-action">Run-and-gun and boss action</a>
+<a href="#narrative-rpg">Narrative RPG</a>
+<a href="#action-platformer">Action platformer</a>
+<a href="#character-action-fps">Character action FPS</a>
+<a href="#top-down-action">Top-down action</a>
+<a href="#survival-platformer">Survival platformer</a>
+<a href="#mid-list-highlight-slay-the-spire-2">Mid-list highlight: Slay the Spire 2</a>
+<a href="#turn-based-roguelite-guide-hub">Turn-based roguelite guide hub</a>
+<a href="#mmo-and-rpg">MMO and RPG</a>
+<a href="#action-rpg">Action RPG</a>
+<a href="#mmo-and-rpg-2">MMO and RPG</a>
+<a href="#mmo-and-franchise-lore">MMO and franchise lore</a>
+<a href="#world-of-warcraft-database-and-guides">World of Warcraft database and guides</a>
+<a href="#rpg-franchise-reference">RPG franchise reference</a>
+<a href="#crpg-and-dungeons-dragons-systems">CRPG and Dungeons &amp; Dragons systems</a>
+<a href="#rpg-franchise-reference-2">RPG franchise reference</a>
+<a href="#rpg-franchise-and-transmedia-lore">RPG franchise and transmedia lore</a>
+<a href="#rpg-franchise-and-setting-reference">RPG franchise and setting reference</a>
+<a href="#action-rpg-franchise-reference">Action RPG franchise reference</a>
+<a href="#action-rpg-guides-and-build-reference">Action RPG guides and build reference</a>
+<a href="#action-rpg-2">Action RPG</a>
+<a href="#action-rpg-and-hunting">Action RPG and hunting</a>
+<a href="#jrpg-franchise-reference">JRPG franchise reference</a>
+<a href="#tactical-rpg-franchise-reference">Tactical RPG franchise reference</a>
+<a href="#jrpg-franchise-reference-2">JRPG franchise reference</a>
+<a href="#mmo-and-rpg-3">MMO and RPG</a>
+<a href="#mmo-learning-and-systems-reference">MMO learning and systems reference</a>
+<a href="#space-sim-reference">Space sim reference</a>
+<a href="#nintendo-and-console-franchises">Nintendo and console franchises</a>
+<a href="#pok-mon-data-and-tools">Pokémon data and tools</a>
+<a href="#pok-mon-news-and-database">Pokémon news and database</a>
+<a href="#nintendo-and-life-sim">Nintendo and life sim</a>
+<a href="#nintendo-and-console-franchises-2">Nintendo and console franchises</a>
+<a href="#nintendo-and-competitive-platform-fighting">Nintendo and competitive platform fighting</a>
+<a href="#nintendo-and-multiplayer-shooters">Nintendo and multiplayer shooters</a>
+<a href="#nintendo-and-console-franchises-3">Nintendo and console franchises</a>
+<a href="#nintendo-and-metroidvania-reference">Nintendo and metroidvania reference</a>
+<a href="#nintendo-and-strategy-adventure">Nintendo and strategy adventure</a>
+<a href="#nintendo-and-console-franchises-4">Nintendo and console franchises</a>
+<a href="#nintendo-and-platforming-franchises">Nintendo and platforming franchises</a>
+<a href="#nintendo-and-tactical-strategy">Nintendo and tactical strategy</a>
+<a href="#esports-and-competitive-games">Esports and competitive games</a>
+<a href="#competitive-moba-gameplay-reference">Competitive MOBA gameplay reference</a>
+<a href="#competitive-and-class-based-fps-reference">Competitive and class-based FPS reference</a>
+<a href="#tactical-fps-gameplay-reference">Tactical FPS gameplay reference</a>
+<a href="#gacha-mobile-and-live-service-rpgs">Gacha, mobile, and live-service RPGs</a>
+<a href="#gacha-mobile-and-live-service-action-rpgs">Gacha, mobile, and live-service action RPGs</a>
+<a href="#gacha-mobile-and-tactical-rpgs">Gacha, mobile, and tactical RPGs</a>
+<a href="#gacha-mobile-and-fleet-collection">Gacha, mobile, and fleet collection</a>
+<a href="#gacha-mobile-and-rpg-reference">Gacha, mobile, and RPG reference</a>
+<a href="#source-and-verification-notes">Source and Verification Notes</a>
+<a href="#maintenance-suggestions">Maintenance Suggestions</a>
+<a href="#suggested-repository-name">Suggested Repository Name</a>
+<a href="#short-readme-blurb">Short README Blurb</a>
+    </nav>
+
+<section class="content-section" id="selection-principles"><h2>Selection Principles</h2>
+<ul>
+<li>Prefer sites that are useful for actual players, editors, researchers, speedrunners, modders, or lore readers.</li>
+</ul>
+<ul>
+<li>Include a mix of official, independent, and large community-hosted resources instead of pretending one hosting model is always best.</li>
+</ul>
+<ul>
+<li>Describe strengths plainly and avoid promotional exaggeration. The Slay the Spire 2 entry highlights visible strengths while staying grounded in the site features visible on the site itself.</li>
+</ul>
+<ul>
+<li>Keep links direct and readable so the list can work as a GitHub README, community bookmark page, or research handout.</li>
+</ul>
+</section>
+<hr />
+<section class="content-section" id="multi-game-reference-and-technical-fixes"><h2>Multi-game reference and technical fixes</h2>
+<article class="entry-card" data-search="1. pcgamingwiki"><h3>1. <a href="https://www.pcgamingwiki.com/wiki/Home" target="_blank" rel="noopener noreferrer">PCGamingWiki</a></h3>
+<p class="description"><strong>Description:</strong> A cross-game encyclopedia focused on PC-specific issues, settings, save locations, controller behavior, ultrawide support, frame-rate limits, launcher notes, and community-tested fixes. It is especially valuable when a game runs poorly, hides configuration files, or needs practical troubleshooting beyond normal strategy guides.</p>
+<p class="best-for"><strong>Best for:</strong> PC compatibility research, bug workarounds, preservation notes, and setup checklists.</p>
+</article>
+</section>
+<section class="content-section" id="multi-game-walkthrough-wiki"><h2>Multi-game walkthrough wiki</h2>
+<article class="entry-card" data-search="2. strategywiki"><h3>2. <a href="https://strategywiki.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer">StrategyWiki</a></h3>
+<p class="description"><strong>Description:</strong> A long-running community wiki built around walkthroughs, stage-by-stage guides, mechanics explanations, character pages, and platform-spanning coverage. It is useful for older console titles, retro games, and games where a structured written walkthrough is more practical than a video guide.</p>
+<p class="best-for"><strong>Best for:</strong> Walkthroughs, completion routes, collectibles, and classic game documentation.</p>
+</article>
+</section>
+<section class="content-section" id="unused-and-hidden-game-content"><h2>Unused and hidden game content</h2>
+<article class="entry-card" data-search="3. the cutting room floor"><h3>3. <a href="https://tcrf.net/The_Cutting_Room_Floor" target="_blank" rel="noopener noreferrer">The Cutting Room Floor</a></h3>
+<p class="description"><strong>Description:</strong> A specialist wiki dedicated to unused content, prototype material, regional differences, debug menus, cut assets, hidden developer text, and version comparisons. It is less about playing a game efficiently and more about understanding what shipped, what was removed, and how games changed during development.</p>
+<p class="best-for"><strong>Best for:</strong> Game preservation, unused assets, regional changes, prototype research, and development history.</p>
+</article>
+</section>
+<section class="content-section" id="legacy-guide-archive-and-community-faqs"><h2>Legacy guide archive and community FAQs</h2>
+<article class="entry-card" data-search="4. gamefaqs"><h3>4. <a href="https://gamefaqs.gamespot.com/" target="_blank" rel="noopener noreferrer">GameFAQs</a></h3>
+<p class="description"><strong>Description:</strong> A major archive of text walkthroughs, FAQs, maps, cheats, and user-submitted guides across decades of console and PC games. It is not a wiki in the strict MediaWiki sense, but it remains a valuable reference for older games whose best documentation lives in classic long-form guide format.</p>
+<p class="best-for"><strong>Best for:</strong> Retro walkthroughs, spoiler-tagged guide sections, maps, secrets, and completion checklists.</p>
+</article>
+</section>
+<section class="content-section" id="game-credits-and-release-database"><h2>Game credits and release database</h2>
+<article class="entry-card" data-search="5. mobygames"><h3>5. <a href="https://www.mobygames.com/" target="_blank" rel="noopener noreferrer">MobyGames</a></h3>
+<p class="description"><strong>Description:</strong> A database-oriented reference for release dates, platforms, credits, covers, screenshots, alternate titles, publishers, developers, and version information. It complements gameplay wikis by focusing on bibliographic and historical metadata rather than tactics or item statistics.</p>
+<p class="best-for"><strong>Best for:</strong> Researching releases, credits, box art, platform variants, and publication history.</p>
+</article>
+</section>
+<section class="content-section" id="game-metadata-database"><h2>Game metadata database</h2>
+<article class="entry-card" data-search="6. igdb"><h3>6. <a href="https://www.igdb.com/" target="_blank" rel="noopener noreferrer">IGDB</a></h3>
+<p class="description"><strong>Description:</strong> A broad game database that indexes titles, companies, platforms, release windows, media, genres, and related metadata. It is useful when building catalogs, comparing editions, or linking game pages to standardized metadata, although gameplay depth usually comes from specialized game wikis.</p>
+<p class="best-for"><strong>Best for:</strong> Cataloging games, metadata lookup, platform lists, and discovery-oriented browsing.</p>
+</article>
+</section>
+<section class="content-section" id="mods-total-conversions-and-community-projects"><h2>Mods, total conversions, and community projects</h2>
+<article class="entry-card" data-search="7. mod db"><h3>7. <a href="https://www.moddb.com/" target="_blank" rel="noopener noreferrer">Mod DB</a></h3>
+<p class="description"><strong>Description:</strong> A large community site for mods, patches, total conversions, developer diaries, screenshots, and files. It is not primarily a wiki, but its project pages often document installation steps, feature lists, changelogs, and compatibility notes that are essential for mod-heavy games.</p>
+<p class="best-for"><strong>Best for:</strong> Discovering mods, reading mod documentation, and following fan-made expansion projects.</p>
+</article>
+</section>
+<section class="content-section" id="modding-documentation-and-tools"><h2>Modding documentation and tools</h2>
+<article class="entry-card" data-search="8. nexus mods wiki"><h3>8. <a href="https://wiki.nexusmods.com/index.php/Main_Page" target="_blank" rel="noopener noreferrer">Nexus Mods Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A documentation hub for Nexus Mods tools, mod manager workflows, site features, and community modding guidance. It is most useful alongside game-specific wikis when the main question is not what an item does in-game, but how to install, manage, troubleshoot, or publish modifications.</p>
+<p class="best-for"><strong>Best for:</strong> Mod manager help, modding workflows, publishing guidance, and tool documentation.</p>
+</article>
+</section>
+<section class="content-section" id="spoiler-light-player-advice"><h2>Spoiler-light player advice</h2>
+<article class="entry-card" data-search="9. before i play"><h3>9. <a href="https://beforeiplay.com/" target="_blank" rel="noopener noreferrer">Before I Play</a></h3>
+<p class="description"><strong>Description:</strong> A concise advice wiki that collects practical tips players may want before starting a game. It fills a different role from encyclopedic wikis: instead of exhaustive item tables, it emphasizes spoiler-light warnings, quality-of-life advice, missable mechanics, and early mistakes to avoid.</p>
+<p class="best-for"><strong>Best for:</strong> Pre-play tips, spoiler-light onboarding, and quick preparation before starting a new title.</p>
+</article>
+</section>
+<section class="content-section" id="speedrunning-leaderboards-and-route-knowledge"><h2>Speedrunning leaderboards and route knowledge</h2>
+<article class="entry-card" data-search="10. speedrun.com"><h3>10. <a href="https://www.speedrun.com/" target="_blank" rel="noopener noreferrer">Speedrun.com</a></h3>
+<p class="description"><strong>Description:</strong> A central hub for speedrunning leaderboards, categories, rules, resources, guides, and community links. It is not a traditional wiki, but many game pages function as knowledge bases for route changes, allowed versions, category definitions, timing methods, and learning materials.</p>
+<p class="best-for"><strong>Best for:</strong> Speedrun rules, route resources, category comparisons, and community discovery.</p>
+</article>
+</section>
+<section class="content-section" id="guide-focused-wiki-network"><h2>Guide-focused wiki network</h2>
+<article class="entry-card" data-search="11. fextralife wikis"><h3>11. <a href="https://fextralife.com/wiki/" target="_blank" rel="noopener noreferrer">Fextralife Wikis</a></h3>
+<p class="description"><strong>Description:</strong> A network of guide and wiki pages for many RPGs, action games, and Soulslike titles. Its pages often combine item data, build ideas, boss guidance, interactive maps, and beginner explanations, making it a practical starting point for games with complicated progression systems.</p>
+<p class="best-for"><strong>Best for:</strong> Build planning, boss guides, item pages, map links, and RPG progression references.</p>
+</article>
+</section>
+<section class="content-section" id="game-database-and-editorial-reference"><h2>Game database and editorial reference</h2>
+<article class="entry-card" data-search="12. giant bomb"><h3>12. <a href="https://www.giantbomb.com/" target="_blank" rel="noopener noreferrer">Giant Bomb</a></h3>
+<p class="description"><strong>Description:</strong> A game database and editorial site with pages for games, characters, concepts, people, companies, and franchises. Its wiki-like database is useful for contextual research, cross-franchise browsing, and connecting games to related media and historical references.</p>
+<p class="best-for"><strong>Best for:</strong> Game metadata, franchise relationships, concept browsing, and contextual research.</p>
+</article>
+</section>
+<section class="content-section" id="sandbox-and-survival"><h2>Sandbox and survival</h2>
+<article class="entry-card" data-search="13. minecraft wiki"><h3>13. <a href="https://minecraft.wiki/" target="_blank" rel="noopener noreferrer">Minecraft Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A major independent resource for Minecraft blocks, mobs, biomes, commands, crafting, redstone, editions, data values, update history, and mechanics. Because Minecraft is constantly evolving, the wiki is especially useful for comparing Java and Bedrock behavior and understanding version-specific changes.</p>
+<p class="best-for"><strong>Best for:</strong> Crafting recipes, commands, technical mechanics, mob behavior, and update history.</p>
+</article>
+<article class="entry-card" data-search="14. official terraria wiki"><h3>14. <a href="https://terraria.wiki.gg/" target="_blank" rel="noopener noreferrer">Official Terraria Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The official wiki for Terraria, covering biomes, bosses, enemies, weapons, armor, crafting, NPCs, events, progression routes, and class setups. Its structured pages make it easy to move from basic survival to late-game optimization in a game with enormous item and boss variety.</p>
+<p class="best-for"><strong>Best for:</strong> Boss progression, class setups, crafting chains, enemy drops, and event planning.</p>
+</article>
+</section>
+<section class="content-section" id="life-sim-and-farming"><h2>Life sim and farming</h2>
+<article class="entry-card" data-search="15. stardew valley wiki"><h3>15. <a href="https://stardewvalleywiki.com/" target="_blank" rel="noopener noreferrer">Stardew Valley Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The official Stardew Valley wiki for crops, villagers, gifts, schedules, fish, quests, recipes, festivals, farm buildings, and version-specific content. Its strength is day-to-day planning: players can quickly check where someone is, what a crop sells for, or how to complete a bundle.</p>
+<p class="best-for"><strong>Best for:</strong> Villager gifts, crop planning, fishing, bundles, festivals, and farming optimization.</p>
+</article>
+</section>
+<section class="content-section" id="colony-simulation-and-roguelike-systems"><h2>Colony simulation and roguelike systems</h2>
+<article class="entry-card" data-search="16. dwarf fortress wiki"><h3>16. <a href="https://dwarffortresswiki.org/" target="_blank" rel="noopener noreferrer">Dwarf Fortress Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A deep community reference for Dwarf Fortress mechanics, fortress management, creatures, materials, industries, moods, military systems, adventure mode, and version differences. It is particularly valuable because the game contains many interacting simulation layers that benefit from careful written explanation.</p>
+<p class="best-for"><strong>Best for:</strong> Fortress planning, mechanics interpretation, creature data, industries, and survival advice.</p>
+</article>
+</section>
+<section class="content-section" id="automation-and-factory-management"><h2>Automation and factory management</h2>
+<article class="entry-card" data-search="17. official factorio wiki"><h3>17. <a href="https://wiki.factorio.com/" target="_blank" rel="noopener noreferrer">Official Factorio Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The official documentation source for Factorio items, fluids, recipes, machines, technologies, enemies, logistics, signals, blueprints, and expansion content. It supports both new engineers learning basic automation and advanced players checking exact ratios, production chains, and system behavior.</p>
+<p class="best-for"><strong>Best for:</strong> Recipe chains, ratios, logistics, circuits, technology data, and production planning.</p>
+</article>
+<article class="entry-card" data-search="18. official satisfactory wiki"><h3>18. <a href="https://satisfactory.wiki.gg/" target="_blank" rel="noopener noreferrer">Official Satisfactory Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki.gg-hosted reference for Satisfactory buildings, milestones, alternate recipes, resources, power, maps, items, and factory systems. It is especially useful for players moving from early spaghetti layouts to planned factories, train networks, drones, and late-game production goals.</p>
+<p class="best-for"><strong>Best for:</strong> Milestones, alternate recipes, resource nodes, power planning, and factory layouts.</p>
+</article>
+</section>
+<section class="content-section" id="colony-simulation-and-story-generation"><h2>Colony simulation and story generation</h2>
+<article class="entry-card" data-search="19. rimworld wiki"><h3>19. <a href="https://rimworldwiki.com/" target="_blank" rel="noopener noreferrer">RimWorld Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A dedicated wiki for RimWorld pawns, traits, skills, biomes, events, factions, weapons, buildings, research, storytellers, DLC systems, and colony management. It helps players understand the hidden calculations behind a game that often creates complex emergent stories from small mechanical details.</p>
+<p class="best-for"><strong>Best for:</strong> Colony planning, trait reference, DLC mechanics, storyteller behavior, and survival systems.</p>
+</article>
+</section>
+<section class="content-section" id="colony-simulation-and-thermodynamics"><h2>Colony simulation and thermodynamics</h2>
+<article class="entry-card" data-search="20. oxygen not included wiki"><h3>20. <a href="https://oxygennotincluded.wiki.gg/" target="_blank" rel="noopener noreferrer">Oxygen Not Included Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Oxygen Not Included elements, buildings, duplicants, critters, food, gases, liquids, heat mechanics, automation, rockets, and colony sustainability. It is useful because the game depends on physical systems where pressure, temperature, material state, and resource loops interact constantly.</p>
+<p class="best-for"><strong>Best for:</strong> Base life-support loops, element data, heat management, automation, and space systems.</p>
+</article>
+</section>
+<section class="content-section" id="survival-and-crafting"><h2>Survival and crafting</h2>
+<article class="entry-card" data-search="21. don&#39;t starve wiki"><h3>21. <a href="https://dontstarve.wiki.gg/" target="_blank" rel="noopener noreferrer">Don't Starve Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Don’t Starve and Don’t Starve Together, covering characters, seasons, mobs, crafting, food values, biomes, bosses, events, and world settings. It is valuable for planning around seasonal hazards and learning how character-specific strengths change survival priorities.</p>
+<p class="best-for"><strong>Best for:</strong> Season preparation, food values, character mechanics, boss strategies, and crafting recipes.</p>
+</article>
+</section>
+<section class="content-section" id="survival-simulation"><h2>Survival simulation</h2>
+<article class="entry-card" data-search="22. project zomboid wiki"><h3>22. <a href="https://pzwiki.net/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Project Zomboid Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A detailed wiki for Project Zomboid skills, traits, professions, maps, items, vehicles, crafting, farming, electricity, generators, weapons, and survival systems. It is particularly useful for understanding long-term survival planning in a sandbox where small mistakes can become permanent consequences.</p>
+<p class="best-for"><strong>Best for:</strong> Trait builds, item uses, vehicle systems, crafting, farming, and survival planning.</p>
+</article>
+</section>
+<section class="content-section" id="survival-taming-and-crafting"><h2>Survival, taming, and crafting</h2>
+<article class="entry-card" data-search="23. ark wiki"><h3>23. <a href="https://ark.wiki.gg/wiki/ARK_Wiki" target="_blank" rel="noopener noreferrer">ARK Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for ARK creatures, taming, breeding, resources, engrams, maps, caves, bosses, items, and server-relevant mechanics. It is especially useful for creature statistics, spawn locations, kibble requirements, breeding timers, and the many map-specific details that affect planning.</p>
+<p class="best-for"><strong>Best for:</strong> Creature taming, breeding, resource locations, cave planning, and boss preparation.</p>
+</article>
+</section>
+<section class="content-section" id="survival-and-exploration"><h2>Survival and exploration</h2>
+<article class="entry-card" data-search="24. valheim wiki"><h3>24. <a href="https://valheim.fandom.com/wiki/Valheim_Wiki" target="_blank" rel="noopener noreferrer">Valheim Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Valheim biomes, bosses, crafting stations, food, weapons, armor, building pieces, sailing, enemies, and resources. It is practical for players who want to understand biome progression, unlock chains, and the relationship between crafting upgrades and exploration risk.</p>
+<p class="best-for"><strong>Best for:</strong> Biome progression, boss summons, crafting upgrades, food planning, and building reference.</p>
+</article>
+</section>
+<section class="content-section" id="survival-exploration"><h2>Survival exploration</h2>
+<article class="entry-card" data-search="25. subnautica wiki"><h3>25. <a href="https://subnautica.fandom.com/wiki/Subnautica_Wiki" target="_blank" rel="noopener noreferrer">Subnautica Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community reference for Subnautica creatures, biomes, fragments, vehicles, base modules, resources, story locations, and survival mechanics. It is useful when players need a spoiler-controlled way to locate materials, understand depth progression, or plan safe routes through dangerous ocean zones.</p>
+<p class="best-for"><strong>Best for:</strong> Biome research, fragment locations, vehicle upgrades, resource planning, and creature data.</p>
+</article>
+</section>
+<section class="content-section" id="survival-crafting"><h2>Survival crafting</h2>
+<article class="entry-card" data-search="26. raft wiki"><h3>26. <a href="https://raft.fandom.com/wiki/Raft_Wiki" target="_blank" rel="noopener noreferrer">Raft Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Raft items, islands, story locations, crafting stations, animals, resources, food, weapons, and raft-building systems. It helps players move from basic ocean survival to efficient resource gathering, large raft design, and progression through narrative destinations.</p>
+<p class="best-for"><strong>Best for:</strong> Crafting recipes, island resources, story progression, raft upgrades, and animal care.</p>
+</article>
+</section>
+<section class="content-section" id="sandbox-adventure"><h2>Sandbox adventure</h2>
+<article class="entry-card" data-search="27. starbounder"><h3>27. <a href="https://starbounder.org/Starbound_Wiki" target="_blank" rel="noopener noreferrer">Starbounder</a></h3>
+<p class="description"><strong>Description:</strong> The Starbound wiki for items, biomes, planets, races, crafting, quests, weapons, armor, tenant systems, and mod-relevant data. It is a strong reference for players who want to understand how exploration, settlement building, and procedural planet variety connect to progression.</p>
+<p class="best-for"><strong>Best for:</strong> Planet types, crafting, tenant systems, quests, item data, and exploration planning.</p>
+</article>
+</section>
+<section class="content-section" id="exploration-and-automation-sandbox"><h2>Exploration and automation sandbox</h2>
+<article class="entry-card" data-search="28. astroneer wiki"><h3>28. <a href="https://astroneer.wiki.gg/" target="_blank" rel="noopener noreferrer">Astroneer Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Astroneer planets, resources, modules, vehicles, crafting, automation, missions, gases, and research systems. It is helpful for mapping resource availability across planets and learning how base modules, power, soil, and automation fit together.</p>
+<p class="best-for"><strong>Best for:</strong> Resource locations, planet data, module recipes, power planning, and automation chains.</p>
+</article>
+</section>
+<section class="content-section" id="survival-crafting-and-creature-collection"><h2>Survival crafting and creature collection</h2>
+<article class="entry-card" data-search="29. palworld wiki"><h3>29. <a href="https://palworld.wiki.gg/" target="_blank" rel="noopener noreferrer">Palworld Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Palworld Pals, skills, work suitability, breeding, items, weapons, bases, maps, bosses, and progression systems. It is useful for comparing creatures, designing efficient bases, and planning collection or combat goals in a large open-world survival structure.</p>
+<p class="best-for"><strong>Best for:</strong> Pal stats, breeding, base work roles, map references, and progression planning.</p>
+</article>
+</section>
+<section class="content-section" id="survival-rpg-and-building"><h2>Survival RPG and building</h2>
+<article class="entry-card" data-search="30. enshrouded wiki"><h3>30. <a href="https://enshrouded.wiki.gg/" target="_blank" rel="noopener noreferrer">Enshrouded Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Enshrouded quests, classes, skills, resources, crafting stations, building, enemies, equipment, and world locations. It helps players understand how character builds, base progression, exploration, and resource discovery support each other.</p>
+<p class="best-for"><strong>Best for:</strong> Class builds, crafting upgrades, quest guidance, resource locations, and exploration routes.</p>
+</article>
+</section>
+<section class="content-section" id="survival-action-rpg"><h2>Survival action RPG</h2>
+<article class="entry-card" data-search="31. v rising wiki"><h3>31. <a href="https://vrising.wiki.gg/" target="_blank" rel="noopener noreferrer">V Rising Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for V Rising bosses, blood types, castles, servants, weapons, armor, crafting stations, spells, resources, and PvE/PvP progression. It is useful for planning boss order, unlocking recipes, and understanding how vampire powers and castle infrastructure develop over time.</p>
+<p class="best-for"><strong>Best for:</strong> Boss unlocks, resource routes, spell choices, castle systems, and gear progression.</p>
+</article>
+</section>
+<section class="content-section" id="simulation-and-collaborative-survival"><h2>Simulation and collaborative survival</h2>
+<article class="entry-card" data-search="32. eco wiki"><h3>32. <a href="https://wiki.play.eco/en/Main_Page" target="_blank" rel="noopener noreferrer">Eco Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Eco skills, professions, crafting, laws, resources, ecology, buildings, and server society systems. It is especially useful for understanding a game where individual crafting choices affect community economics, governance, and environmental balance.</p>
+<p class="best-for"><strong>Best for:</strong> Professions, resource chains, ecology systems, lawmaking, and server collaboration.</p>
+</article>
+</section>
+<section class="content-section" id="sandbox-mining-adventure"><h2>Sandbox mining adventure</h2>
+<article class="entry-card" data-search="33. core keeper wiki"><h3>33. <a href="https://corekeeper.atma.gg/en/Core_Keeper_Wiki" target="_blank" rel="noopener noreferrer">Core Keeper Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Core Keeper items, bosses, biomes, NPCs, crafting, farming, fishing, enemies, and base systems. It is a practical reference for players who want to plan underground exploration, improve equipment, and understand boss progression.</p>
+<p class="best-for"><strong>Best for:</strong> Boss order, crafting, farming, biomes, item drops, and base progression.</p>
+</article>
+</section>
+<section class="content-section" id="survival-crafting-2"><h2>Survival crafting</h2>
+<article class="entry-card" data-search="34. grounded wiki"><h3>34. <a href="https://grounded.fandom.com/wiki/Grounded_Wiki" target="_blank" rel="noopener noreferrer">Grounded Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Grounded creatures, resources, weapons, armor, mutations, base building, story labs, recipes, and backyard locations. It helps players turn environmental observations into practical survival choices, especially when learning which insects are threats, resources, or progression gates.</p>
+<p class="best-for"><strong>Best for:</strong> Creature behavior, crafting, mutations, armor sets, lab progression, and base materials.</p>
+</article>
+</section>
+<section class="content-section" id="survival-simulation-2"><h2>Survival simulation</h2>
+<article class="entry-card" data-search="35. the long dark wiki"><h3>35. <a href="https://thelongdark.fandom.com/wiki/The_Long_Dark_Wiki" target="_blank" rel="noopener noreferrer">The Long Dark Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for The Long Dark regions, wildlife, weather, clothing, tools, food, skills, story episodes, and survival mechanics. It is useful for players who need careful planning around temperature, weight, resources, routes, and risk management in harsh wilderness conditions.</p>
+<p class="best-for"><strong>Best for:</strong> Regional planning, survival mechanics, clothing warmth, wildlife behavior, and route safety.</p>
+</article>
+</section>
+<section class="content-section" id="open-world-squad-rpg"><h2>Open-world squad RPG</h2>
+<article class="entry-card" data-search="36. kenshi wiki"><h3>36. <a href="https://kenshi.fandom.com/wiki/Kenshi_Wiki" target="_blank" rel="noopener noreferrer">Kenshi Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Kenshi factions, towns, recruits, weapons, armor, races, skills, research, base building, and world systems. It supports players navigating a game with few fixed objectives, helping them understand faction politics, survival risks, and progression possibilities.</p>
+<p class="best-for"><strong>Best for:</strong> Faction research, recruit planning, base building, skills, gear, and world exploration.</p>
+</article>
+</section>
+<section class="content-section" id="roguelike-indie-and-action"><h2>Roguelike, indie, and action</h2>
+<article class="entry-card" data-search="37. noita wiki"><h3>37. <a href="https://noita.wiki.gg/" target="_blank" rel="noopener noreferrer">Noita Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Noita spells, wands, perks, enemies, biomes, secrets, alchemy, world maps, and simulation mechanics. It is especially useful because Noita hides powerful systems behind experimentation, and the wiki helps players understand interactions without reducing the game to a simple checklist.</p>
+<p class="best-for"><strong>Best for:</strong> Spell interactions, wand building, secrets, maps, enemy behavior, and alchemy.</p>
+</article>
+</section>
+<section class="content-section" id="metroidvania-and-action-adventure"><h2>Metroidvania and action adventure</h2>
+<article class="entry-card" data-search="38. hollow knight wiki"><h3>38. <a href="https://hollowknight.wiki.gg/" target="_blank" rel="noopener noreferrer">Hollow Knight Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Hollow Knight areas, charms, bosses, NPCs, quests, endings, enemies, lore, and collectibles. It is useful for spoiler-aware exploration, routing charm builds, and understanding how hidden content connects across Hallownest.</p>
+<p class="best-for"><strong>Best for:</strong> Boss strategies, charm builds, area maps, questlines, endings, and lore reference.</p>
+</article>
+</section>
+<section class="content-section" id="precision-platformer"><h2>Precision platformer</h2>
+<article class="entry-card" data-search="39. celeste wiki"><h3>39. <a href="https://celestegame.fandom.com/wiki/Celeste_Wiki" target="_blank" rel="noopener noreferrer">Celeste Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Celeste chapters, characters, strawberries, crystal hearts, mechanics, variants, and story details. It is helpful for players who want a written reference for collectibles, chapter structure, and the movement techniques that support more advanced platforming goals.</p>
+<p class="best-for"><strong>Best for:</strong> Collectibles, chapter navigation, movement concepts, characters, and completion reference.</p>
+</article>
+</section>
+<section class="content-section" id="roguelite-action-platformer"><h2>Roguelite action platformer</h2>
+<article class="entry-card" data-search="40. official dead cells wiki"><h3>40. <a href="https://deadcells.wiki.gg/" target="_blank" rel="noopener noreferrer">Official Dead Cells Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The official community wiki for Dead Cells weapons, biomes, mutations, outfits, enemies, bosses, blueprints, runes, aspects, and DLC. It is valuable for comparing gear, learning biome routes, and planning progression through a fast action game with many unlock layers.</p>
+<p class="best-for"><strong>Best for:</strong> Weapon data, biome routes, boss cells, mutations, blueprints, and DLC content.</p>
+</article>
+</section>
+<section class="content-section" id="roguelike-shooter"><h2>Roguelike shooter</h2>
+<article class="entry-card" data-search="41. risk of rain 2 wiki"><h3>41. <a href="https://riskofrain2.wiki.gg/" target="_blank" rel="noopener noreferrer">Risk of Rain 2 Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Risk of Rain 2 survivors, items, equipment, artifacts, stages, monsters, bosses, proc coefficients, and unlocks. It is especially useful for understanding item stacking and the probability-driven mechanics that shape builds during long runs.</p>
+<p class="best-for"><strong>Best for:</strong> Item stacking, survivor builds, unlocks, artifacts, stages, and advanced mechanics.</p>
+</article>
+</section>
+<section class="content-section" id="roguelike-dungeon-crawler"><h2>Roguelike dungeon crawler</h2>
+<article class="entry-card" data-search="42. binding of isaac: rebirth wiki"><h3>42. <a href="https://bindingofisaacrebirth.wiki.gg/" target="_blank" rel="noopener noreferrer">Binding of Isaac: Rebirth Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for The Binding of Isaac: Rebirth items, trinkets, characters, rooms, bosses, transformations, achievements, and expansion content. It is one of the most useful quick-reference resources for identifying items and understanding synergies in a highly item-dense roguelike.</p>
+<p class="best-for"><strong>Best for:</strong> Item identification, synergies, unlocks, transformations, characters, and boss data.</p>
+</article>
+</section>
+<section class="content-section" id="roguelike-deckbuilder"><h2>Roguelike deckbuilder</h2>
+<article class="entry-card" data-search="43. balatro wiki"><h3>43. <a href="https://balatrowiki.org/" target="_blank" rel="noopener noreferrer">Balatro Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent wiki for Balatro jokers, decks, vouchers, blinds, spectral cards, planet cards, tags, challenges, unlocks, and scoring systems. It is useful for players learning how poker-hand rules interact with roguelike modifiers and long-term run strategy.</p>
+<p class="best-for"><strong>Best for:</strong> Joker effects, deck planning, unlocks, blind mechanics, scoring, and challenge reference.</p>
+</article>
+<article class="entry-card" data-search="44. slay the spire wiki"><h3>44. <a href="https://slay-the-spire.fandom.com/wiki/Slay_the_Spire_Wiki" target="_blank" rel="noopener noreferrer">Slay the Spire Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Slay the Spire cards, relics, potions, events, characters, enemies, bosses, ascension rules, and daily climb mechanics. It remains useful for checking exact card text, relic interactions, and event outcomes in the original modern deckbuilding classic.</p>
+<p class="best-for"><strong>Best for:</strong> Card text, relic interactions, event outcomes, ascension play, and character pools.</p>
+</article>
+</section>
+<section class="content-section" id="roguelike-strategy"><h2>Roguelike strategy</h2>
+<article class="entry-card" data-search="45. ftl: faster than light wiki"><h3>45. <a href="https://ftl.fandom.com/wiki/FTL:_Faster_Than_Light_Wiki" target="_blank" rel="noopener noreferrer">FTL: Faster Than Light Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for FTL ships, systems, weapons, drones, crew species, events, sectors, enemies, and unlock conditions. It is useful because many FTL decisions rely on probabilities, event knowledge, and understanding how ship systems interact during real-time combat.</p>
+<p class="best-for"><strong>Best for:</strong> Ship unlocks, event choices, weapon data, crew roles, sector planning, and system strategy.</p>
+</article>
+</section>
+<section class="content-section" id="tactical-roguelike"><h2>Tactical roguelike</h2>
+<article class="entry-card" data-search="46. into the breach wiki"><h3>46. <a href="https://intothebreach.fandom.com/wiki/Into_The_Breach_Wiki" target="_blank" rel="noopener noreferrer">Into the Breach Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Into the Breach squads, mechs, pilots, weapons, islands, enemies, objectives, achievements, and advanced edition content. It supports tactical planning by clarifying unit abilities, upgrade paths, and the constraints behind each squad’s puzzle-like turns.</p>
+<p class="best-for"><strong>Best for:</strong> Squad mechanics, pilot abilities, objectives, enemy data, and achievement planning.</p>
+</article>
+</section>
+<section class="content-section" id="bullet-heaven-and-roguelite"><h2>Bullet heaven and roguelite</h2>
+<article class="entry-card" data-search="47. vampire survivors wiki"><h3>47. <a href="https://vampire.survivors.wiki/" target="_blank" rel="noopener noreferrer">Vampire Survivors Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The official Vampire Survivors wiki for characters, weapons, evolutions, stages, relics, secrets, collections, DLC, and unlock paths. It is excellent for quickly checking evolution requirements and planning route-efficient unlocks in a game full of hidden triggers.</p>
+<p class="best-for"><strong>Best for:</strong> Weapon evolutions, secret unlocks, characters, stages, relics, and DLC reference.</p>
+</article>
+</section>
+<section class="content-section" id="bullet-hell-roguelike"><h2>Bullet-hell roguelike</h2>
+<article class="entry-card" data-search="48. enter the gungeon wiki"><h3>48. <a href="https://enterthegungeon.fandom.com/wiki/Enter_the_Gungeon_Wiki" target="_blank" rel="noopener noreferrer">Enter the Gungeon Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Enter the Gungeon guns, items, synergies, characters, bosses, enemies, chambers, NPCs, and unlocks. It is particularly useful for identifying synergies and understanding how a huge arsenal changes from run to run.</p>
+<p class="best-for"><strong>Best for:</strong> Gun data, item synergies, unlocks, boss reference, NPC quests, and chamber details.</p>
+</article>
+</section>
+<section class="content-section" id="platforming-roguelike"><h2>Platforming roguelike</h2>
+<article class="entry-card" data-search="49. spelunky wiki"><h3>49. <a href="https://spelunky.fyi/" target="_blank" rel="noopener noreferrer">Spelunky Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community hub and wiki-style reference for Spelunky games, items, enemies, levels, mechanics, seeds, and strategy resources. It is valuable for players learning how small environmental details, enemy movement, and item use create high-skill platforming decisions.</p>
+<p class="best-for"><strong>Best for:</strong> Item uses, enemy behavior, level rules, secrets, speedrun learning, and community resources.</p>
+</article>
+</section>
+<section class="content-section" id="roguelite-platformer"><h2>Roguelite platformer</h2>
+<article class="entry-card" data-search="50. rogue legacy wiki"><h3>50. <a href="https://rogue-legacy.fandom.com/wiki/Rogue_Legacy_Wiki" target="_blank" rel="noopener noreferrer">Rogue Legacy Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Rogue Legacy classes, traits, bosses, rooms, equipment, runes, upgrades, and progression mechanics. It is useful for understanding how inherited traits and long-term castle upgrades change each attempt across the game’s roguelite structure.</p>
+<p class="best-for"><strong>Best for:</strong> Class traits, upgrades, equipment, bosses, rooms, and inheritance mechanics.</p>
+</article>
+</section>
+<section class="content-section" id="tactical-roguelike-rpg"><h2>Tactical roguelike RPG</h2>
+<article class="entry-card" data-search="51. darkest dungeon wiki"><h3>51. <a href="https://darkestdungeon.wiki.gg/" target="_blank" rel="noopener noreferrer">Darkest Dungeon Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki for Darkest Dungeon heroes, quirks, trinkets, monsters, bosses, locations, curios, diseases, provisions, and campaign systems. It is a strong planning resource because successful runs depend on knowing risks, preparation requirements, and party composition tradeoffs.</p>
+<p class="best-for"><strong>Best for:</strong> Hero builds, curios, provisions, boss planning, trinkets, and campaign strategy.</p>
+</article>
+</section>
+<section class="content-section" id="action-roguelite-and-colony-management"><h2>Action roguelite and colony management</h2>
+<article class="entry-card" data-search="52. cult of the lamb wiki"><h3>52. <a href="https://cult-of-the-lamb.fandom.com/wiki/Cult_of_the_Lamb_Wiki" target="_blank" rel="noopener noreferrer">Cult of the Lamb Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Cult of the Lamb doctrines, followers, resources, buildings, weapons, curses, bosses, rituals, and quests. It helps players connect the game’s dungeon-run action layer with the settlement management and follower-care systems.</p>
+<p class="best-for"><strong>Best for:</strong> Doctrine choices, follower management, resources, rituals, weapons, and boss progression.</p>
+</article>
+</section>
+<section class="content-section" id="action-roguelike"><h2>Action roguelike</h2>
+<article class="entry-card" data-search="53. hades wiki"><h3>53. <a href="https://hades.fandom.com/wiki/Hades_Wiki" target="_blank" rel="noopener noreferrer">Hades Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Hades boons, weapons, aspects, keepsakes, companions, characters, prophecies, enemies, bosses, and story progression. It is useful for planning builds, learning boon interactions, and tracking relationship-based unlocks across repeated escape attempts.</p>
+<p class="best-for"><strong>Best for:</strong> Boon builds, weapon aspects, keepsakes, story unlocks, relationships, and boss guidance.</p>
+</article>
+<article class="entry-card" data-search="54. hades ii wiki"><h3>54. <a href="https://hades.fandom.com/wiki/Hades_II" target="_blank" rel="noopener noreferrer">Hades II Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Hades II characters, boons, weapons, incantations, resources, enemies, bosses, and underworld/surface progression. It is useful for players following an evolving sequel where new systems, materials, and build routes reward clear reference pages.</p>
+<p class="best-for"><strong>Best for:</strong> Boon pools, resource tracking, incantations, weapons, character pages, and boss reference.</p>
+</article>
+</section>
+<section class="content-section" id="metroidvania-and-platform-adventure"><h2>Metroidvania and platform adventure</h2>
+<article class="entry-card" data-search="55. ori wiki"><h3>55. <a href="https://oriandtheblindforest.fandom.com/wiki/Ori_Wiki" target="_blank" rel="noopener noreferrer">Ori Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Ori and the Blind Forest and Ori and the Will of the Wisps, covering abilities, areas, characters, collectibles, enemies, skills, and story elements. It is useful for completion routing and understanding the ability-gated structure of both games.</p>
+<p class="best-for"><strong>Best for:</strong> Collectibles, abilities, areas, story reference, enemies, and completion paths.</p>
+</article>
+</section>
+<section class="content-section" id="run-and-gun-and-boss-action"><h2>Run-and-gun and boss action</h2>
+<article class="entry-card" data-search="56. cuphead wiki"><h3>56. <a href="https://cuphead.fandom.com/wiki/Cuphead_Wiki" target="_blank" rel="noopener noreferrer">Cuphead Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Cuphead bosses, phases, weapons, charms, levels, parry mechanics, achievements, DLC content, and character pages. It is useful for learning boss patterns, comparing equipment choices, and revisiting the game’s distinctive animation-inspired world.</p>
+<p class="best-for"><strong>Best for:</strong> Boss phases, weapon choices, charms, achievements, DLC content, and character reference.</p>
+</article>
+</section>
+<section class="content-section" id="narrative-rpg"><h2>Narrative RPG</h2>
+<article class="entry-card" data-search="57. undertale wiki"><h3>57. <a href="https://undertale.fandom.com/wiki/Undertale_Wiki" target="_blank" rel="noopener noreferrer">Undertale Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Undertale characters, routes, endings, items, battles, locations, music, dialogue, and lore. It is useful for players who want to understand route differences, character relationships, and the many hidden details that support the game’s narrative structure.</p>
+<p class="best-for"><strong>Best for:</strong> Routes, endings, characters, dialogue, hidden details, and lore reference.</p>
+</article>
+<article class="entry-card" data-search="58. deltarune wiki"><h3>58. <a href="https://deltarune.fandom.com/wiki/Deltarune_Wiki" target="_blank" rel="noopener noreferrer">Deltarune Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Deltarune chapters, characters, enemies, items, rooms, secrets, music, dialogue, and theories. It is useful for tracking chapter-specific details and comparing how new releases expand the game’s systems and story.</p>
+<p class="best-for"><strong>Best for:</strong> Chapter reference, secrets, characters, enemy data, dialogue, and story details.</p>
+</article>
+</section>
+<section class="content-section" id="action-platformer"><h2>Action platformer</h2>
+<article class="entry-card" data-search="59. pizza tower wiki"><h3>59. <a href="https://pizzatower.wiki/" target="_blank" rel="noopener noreferrer">Pizza Tower Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Pizza Tower levels, characters, transformations, enemies, collectibles, ranks, music, and mechanics. It helps players understand high-speed platforming objectives, stage secrets, and the route knowledge behind stronger completion ranks.</p>
+<p class="best-for"><strong>Best for:</strong> Level secrets, transformations, ranks, collectibles, characters, and enemy reference.</p>
+</article>
+</section>
+<section class="content-section" id="character-action-fps"><h2>Character action FPS</h2>
+<article class="entry-card" data-search="60. ultrakill wiki"><h3>60. <a href="https://ultrakill.wiki.gg/" target="_blank" rel="noopener noreferrer">ULTRAKILL Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for ULTRAKILL weapons, enemies, levels, terminals, ranks, secrets, lore, and advanced mechanics. It is useful for players who want to understand combat style systems, hidden stage content, and the technical interactions behind high-skill play.</p>
+<p class="best-for"><strong>Best for:</strong> Weapons, enemy data, secrets, style mechanics, level routes, and lore notes.</p>
+</article>
+</section>
+<section class="content-section" id="top-down-action"><h2>Top-down action</h2>
+<article class="entry-card" data-search="61. hotline miami wiki"><h3>61. <a href="https://hotlinemiami.fandom.com/wiki/Hotline_Miami_Wiki" target="_blank" rel="noopener noreferrer">Hotline Miami Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Hotline Miami characters, masks, weapons, chapters, enemies, story chronology, and soundtrack information. It is useful for players and researchers who want to revisit mission details, character connections, and the series’ fragmented narrative.</p>
+<p class="best-for"><strong>Best for:</strong> Masks, chapters, characters, weapons, story chronology, and soundtrack reference.</p>
+</article>
+</section>
+<section class="content-section" id="survival-platformer"><h2>Survival platformer</h2>
+<article class="entry-card" data-search="62. rain world wiki"><h3>62. <a href="https://rainworld.miraheze.org/wiki/Rain_World_Wiki" target="_blank" rel="noopener noreferrer">Rain World Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Rain World regions, slugcats, creatures, items, karma, pearls, lore, DLC campaigns, and survival systems. It is helpful for navigating a harsh ecosystem-driven game where creature behavior and route knowledge matter as much as platforming skill.</p>
+<p class="best-for"><strong>Best for:</strong> Region navigation, creature behavior, slugcat campaigns, lore, and survival systems.</p>
+</article>
+</section>
+<section class="content-section" id="mid-list-highlight-slay-the-spire-2"><h2>Mid-list highlight: Slay the Spire 2</h2>
+<article class="entry-card" data-search="63. sts2.io — slay the spire 2 guide hub ⭐ mid-list highlight"><h3>63. <a href="https://sts2.io/en/" target="_blank" rel="noopener noreferrer">STS2.io — Slay the Spire 2 Guide Hub</a> ⭐ <strong>Mid-list highlight</strong></h3>
+<p class="description"><strong>Description:</strong> STS2.io is a clean, focused, multilingual guide hub for Slay the Spire 2. It brings together card references, relic information, class archetypes, boss guidance, monster data, route planning, a broader database, and mod-related resources in one easy-to-navigate place. The site is a strong fit for players who want quick answers during runs as well as structured learning between runs.</p>
+<p class="best-for"><strong>Best for:</strong> Cards, relics, class builds, boss preparation, monster lookup, route planning, and fast Slay the Spire 2 study.</p>
+</article>
+</section>
+<section class="content-section" id="turn-based-roguelite-guide-hub"><h2>Turn-based roguelite guide hub</h2>
+<article class="entry-card" data-search="64. vampire crawlers guide"><h3>64. <a href="https://vampirecrawlers.net/" target="_blank" rel="noopener noreferrer">Vampire Crawlers Guide</a></h3>
+<p class="description"><strong>Description:</strong> A focused guide site for Vampire Crawlers, with mobile-friendly pages for Turboturn card order, dungeon routes, crawler builds, boss tactics, gear choices, patch notes, and searchable reference data. It is useful as a compact companion for players who want route and build advice without browsing a general-purpose wiki.</p>
+<p class="best-for"><strong>Best for:</strong> Turboturn sequencing, dungeon route planning, crawler builds, boss preparation, gear choices, and quick run reference.</p>
+</article>
+</section>
+<section class="content-section" id="mmo-and-rpg"><h2>MMO and RPG</h2>
+<article class="entry-card" data-search="65. old school runescape wiki"><h3>65. <a href="https://oldschool.runescape.wiki/" target="_blank" rel="noopener noreferrer">Old School RuneScape Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A major independent wiki for Old School RuneScape quests, items, skills, monsters, bosses, minigames, maps, calculators, money-making methods, and game updates. It is one of the best examples of a player-maintained MMO wiki with deep practical tools and extensive editorial coverage.</p>
+<p class="best-for"><strong>Best for:</strong> Quest guides, skilling, bossing, item lookup, calculators, and economy-aware planning.</p>
+</article>
+<article class="entry-card" data-search="66. runescape wiki"><h3>66. <a href="https://runescape.wiki/" target="_blank" rel="noopener noreferrer">RuneScape Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The independent wiki for modern RuneScape, covering quests, skills, items, bosses, lore, achievements, events, and calculators. It is valuable for a live MMO where long-term account progress, repeated updates, and deep systems create a constant need for accurate reference material.</p>
+<p class="best-for"><strong>Best for:</strong> Questing, skilling, combat, event tracking, item data, and player tools.</p>
+</article>
+</section>
+<section class="content-section" id="action-rpg"><h2>Action RPG</h2>
+<article class="entry-card" data-search="67. path of exile wiki"><h3>67. <a href="https://www.poewiki.net/" target="_blank" rel="noopener noreferrer">Path of Exile Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The official Path of Exile wiki, maintained by the community and hosted by Grinding Gear Games, covering skills, items, passives, gems, leagues, bosses, mechanics, and crafting systems. It is essential for a game where precise wording and item interactions define build planning.</p>
+<p class="best-for"><strong>Best for:</strong> Skill gems, passive mechanics, unique items, crafting, league systems, and boss reference.</p>
+</article>
+<article class="entry-card" data-search="68. path of exile 2 wiki"><h3>68. <a href="https://www.poe2wiki.net/" target="_blank" rel="noopener noreferrer">Path of Exile 2 Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A dedicated community wiki for Path of Exile 2 skills, supports, classes, ascendancies, items, bosses, campaign areas, crafting, and systems. It is useful for players separating sequel-specific mechanics from original Path of Exile assumptions.</p>
+<p class="best-for"><strong>Best for:</strong> Class planning, skill interactions, item systems, campaign reference, and mechanics lookup.</p>
+</article>
+</section>
+<section class="content-section" id="mmo-and-rpg-2"><h2>MMO and RPG</h2>
+<article class="entry-card" data-search="69. guild wars 2 wiki"><h3>69. <a href="https://wiki.guildwars2.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Guild Wars 2 Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The official Guild Wars 2 wiki, written and maintained by players, with pages for professions, events, maps, items, achievements, masteries, story, raids, fractals, and living world content. Its in-game /wiki integration makes it especially convenient during active play.</p>
+<p class="best-for"><strong>Best for:</strong> Event timers, achievements, maps, profession mechanics, currencies, and story content.</p>
+</article>
+<article class="entry-card" data-search="70. final fantasy xiv online wiki"><h3>70. <a href="https://ffxiv.consolegameswiki.com/wiki/FF14_Wiki" target="_blank" rel="noopener noreferrer">Final Fantasy XIV Online Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A comprehensive player-maintained reference for Final Fantasy XIV jobs, quests, duties, trials, raids, crafting, gathering, mounts, minions, achievements, and patch content. It is useful for both new players unlocking systems and experienced players checking exact rewards or requirements.</p>
+<p class="best-for"><strong>Best for:</strong> Unlock requirements, job guides, crafting/gathering, duties, collectibles, and patch content.</p>
+</article>
+</section>
+<section class="content-section" id="mmo-and-franchise-lore"><h2>MMO and franchise lore</h2>
+<article class="entry-card" data-search="71. warcraft wiki"><h3>71. <a href="https://warcraft.wiki.gg/" target="_blank" rel="noopener noreferrer">Warcraft Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An officially recognized wiki for the Warcraft universe, with strong coverage of World of Warcraft, Warcraft strategy games, lore, characters, zones, items, quests, novels, comics, and historical timeline material. It is useful for gameplay context and franchise-level research.</p>
+<p class="best-for"><strong>Best for:</strong> Warcraft lore, characters, locations, timeline research, quests, and franchise references.</p>
+</article>
+</section>
+<section class="content-section" id="world-of-warcraft-database-and-guides"><h2>World of Warcraft database and guides</h2>
+<article class="entry-card" data-search="72. wowhead"><h3>72. <a href="https://www.wowhead.com/" target="_blank" rel="noopener noreferrer">Wowhead</a></h3>
+<p class="description"><strong>Description:</strong> A large World of Warcraft information site with item databases, news, guides, talent tools, comments, class resources, profession pages, transmog references, and patch coverage. It complements wiki-style lore pages by emphasizing live gameplay data and player-facing optimization.</p>
+<p class="best-for"><strong>Best for:</strong> Items, quests, builds, class guides, comments, professions, collectibles, and WoW news.</p>
+</article>
+</section>
+<section class="content-section" id="rpg-franchise-reference"><h2>RPG franchise reference</h2>
+<article class="entry-card" data-search="73. unofficial elder scrolls pages (uesp)"><h3>73. <a href="https://en.uesp.net/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Unofficial Elder Scrolls Pages (UESP)</a></h3>
+<p class="description"><strong>Description:</strong> A long-running independent Elder Scrolls wiki covering Arena through Skyrim, Online, spin-offs, lore, quests, locations, NPCs, items, factions, mechanics, and mod-adjacent technical notes. It is known for depth, careful documentation, and strong franchise-wide continuity.</p>
+<p class="best-for"><strong>Best for:</strong> Elder Scrolls quests, lore, NPCs, maps, mechanics, and historical franchise research.</p>
+</article>
+<article class="entry-card" data-search="74. independent fallout wiki"><h3>74. <a href="https://fallout.wiki/wiki/Fallout_Wiki" target="_blank" rel="noopener noreferrer">Independent Fallout Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent wiki for the Fallout series, covering quests, characters, locations, factions, weapons, perks, timeline events, development notes, and game-specific mechanics. It is valuable for players and lore readers who want a focused, franchise-wide reference outside a general-purpose host.</p>
+<p class="best-for"><strong>Best for:</strong> Fallout lore, quests, factions, weapons, perks, timelines, and game-world research.</p>
+</article>
+</section>
+<section class="content-section" id="crpg-and-dungeons-dragons-systems"><h2>CRPG and Dungeons &amp; Dragons systems</h2>
+<article class="entry-card" data-search="75. bg3 wiki"><h3>75. <a href="https://bg3.wiki/" target="_blank" rel="noopener noreferrer">BG3 Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent wiki for Baldur’s Gate 3 spells, classes, subclasses, items, quests, companions, conditions, locations, mechanics, and choices. It is extremely useful for a rules-heavy CRPG where builds, dialogue outcomes, and hidden interactions benefit from precise documentation.</p>
+<p class="best-for"><strong>Best for:</strong> Build planning, spells, equipment, quests, companions, conditions, and mechanics.</p>
+</article>
+</section>
+<section class="content-section" id="rpg-franchise-reference-2"><h2>RPG franchise reference</h2>
+<article class="entry-card" data-search="76. dragon age wiki"><h3>76. <a href="https://dragonage.fandom.com/wiki/Dragon_Age_Wiki" target="_blank" rel="noopener noreferrer">Dragon Age Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Dragon Age games, characters, companions, quests, locations, codex entries, factions, items, classes, and lore. It is useful for tracking narrative continuity, companion relationships, and worldbuilding across a multi-game BioWare franchise.</p>
+<p class="best-for"><strong>Best for:</strong> Companion pages, quest reference, codex lore, factions, classes, and timeline continuity.</p>
+</article>
+<article class="entry-card" data-search="77. mass effect wiki"><h3>77. <a href="https://masseffect.fandom.com/wiki/Mass_Effect_Wiki" target="_blank" rel="noopener noreferrer">Mass Effect Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Mass Effect characters, missions, planets, species, ships, weapons, powers, choices, codex entries, and lore. It is especially useful for understanding long-running narrative consequences and the science-fiction setting across the trilogy and later entries.</p>
+<p class="best-for"><strong>Best for:</strong> Mission outcomes, character pages, codex lore, planets, species, weapons, and powers.</p>
+</article>
+</section>
+<section class="content-section" id="rpg-franchise-and-transmedia-lore"><h2>RPG franchise and transmedia lore</h2>
+<article class="entry-card" data-search="78. the witcher wiki"><h3>78. <a href="https://witcher.fandom.com/wiki/Witcher_Wiki" target="_blank" rel="noopener noreferrer">The Witcher Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for The Witcher games, books, characters, locations, monsters, quests, alchemy, equipment, signs, and lore. It is useful because the franchise spans novels, games, and adaptations, requiring cross-media context for many names and events.</p>
+<p class="best-for"><strong>Best for:</strong> Quest reference, bestiary entries, lore, alchemy, characters, locations, and equipment.</p>
+</article>
+</section>
+<section class="content-section" id="rpg-franchise-and-setting-reference"><h2>RPG franchise and setting reference</h2>
+<article class="entry-card" data-search="79. cyberpunk wiki"><h3>79. <a href="https://cyberpunk.fandom.com/wiki/Cyberpunk_Wiki" target="_blank" rel="noopener noreferrer">Cyberpunk Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Cyberpunk 2077, Phantom Liberty, Cyberpunk RED, characters, locations, corporations, cyberware, weapons, missions, vehicles, and setting lore. It is useful for connecting tabletop background with the game’s quests, people, and Night City history.</p>
+<p class="best-for"><strong>Best for:</strong> Missions, cyberware, weapons, corporations, characters, tabletop links, and Night City lore.</p>
+</article>
+</section>
+<section class="content-section" id="action-rpg-franchise-reference"><h2>Action RPG franchise reference</h2>
+<article class="entry-card" data-search="80. diablo wiki"><h3>80. <a href="https://diablo.fandom.com/wiki/Diablo_Wiki" target="_blank" rel="noopener noreferrer">Diablo Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Diablo games, classes, monsters, items, locations, lore, skills, acts, bosses, and franchise history. It is useful for broad series research, especially when comparing how concepts such as Prime Evils, classes, and world regions appear across entries.</p>
+<p class="best-for"><strong>Best for:</strong> Series lore, class history, bosses, monsters, items, acts, and franchise context.</p>
+</article>
+</section>
+<section class="content-section" id="action-rpg-guides-and-build-reference"><h2>Action RPG guides and build reference</h2>
+<article class="entry-card" data-search="81. maxroll diablo 4 wiki"><h3>81. <a href="https://maxroll.gg/d4/wiki" target="_blank" rel="noopener noreferrer">Maxroll Diablo 4 Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A guide-driven Diablo 4 knowledge base with builds, tier lists, mechanics explanations, item references, boss guides, endgame systems, and seasonal resources. It is practical for players who want current build planning and structured optimization rather than only encyclopedic lore.</p>
+<p class="best-for"><strong>Best for:</strong> Builds, leveling, endgame systems, seasonal mechanics, bosses, and optimization guides.</p>
+</article>
+</section>
+<section class="content-section" id="action-rpg-2"><h2>Action RPG</h2>
+<article class="entry-card" data-search="82. grim dawn wiki"><h3>82. <a href="https://grimdawn.fandom.com/wiki/Grim_Dawn_Wiki" target="_blank" rel="noopener noreferrer">Grim Dawn Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Grim Dawn masteries, skills, devotion, items, factions, quests, monsters, locations, crafting, and DLC. It is useful for understanding build foundations in a game where class combinations and devotion paths create many viable character directions.</p>
+<p class="best-for"><strong>Best for:</strong> Mastery combinations, devotion planning, quests, factions, items, and crafting.</p>
+</article>
+</section>
+<section class="content-section" id="action-rpg-and-hunting"><h2>Action RPG and hunting</h2>
+<article class="entry-card" data-search="83. monster hunter wiki"><h3>83. <a href="https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki" target="_blank" rel="noopener noreferrer">Monster Hunter Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for the Monster Hunter franchise, covering monsters, weapons, armor, skills, items, locations, quests, ecology, and series history. It is valuable for comparing monster behavior and equipment across games with long-running mechanical traditions.</p>
+<p class="best-for"><strong>Best for:</strong> Monster data, weapon trees, armor skills, quest reference, items, and franchise history.</p>
+</article>
+</section>
+<section class="content-section" id="jrpg-franchise-reference"><h2>JRPG franchise reference</h2>
+<article class="entry-card" data-search="84. dragon quest wiki"><h3>84. <a href="https://dragonquestwiki.com/" target="_blank" rel="noopener noreferrer">Dragon Quest Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent wiki for the Dragon Quest series, covering games, characters, monsters, spells, equipment, locations, classes, story elements, and localization details. It is useful for a franchise with many recurring creatures, terminology, and design traditions.</p>
+<p class="best-for"><strong>Best for:</strong> Monsters, spells, equipment, characters, locations, game pages, and series continuity.</p>
+</article>
+</section>
+<section class="content-section" id="tactical-rpg-franchise-reference"><h2>Tactical RPG franchise reference</h2>
+<article class="entry-card" data-search="85. fire emblem wiki"><h3>85. <a href="https://fireemblemwiki.org/" target="_blank" rel="noopener noreferrer">Fire Emblem Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent wiki for Fire Emblem games, characters, classes, chapters, weapons, skills, supports, maps, and mechanics. It is useful for comparing units, planning routes, and understanding how recurring tactical systems change across entries.</p>
+<p class="best-for"><strong>Best for:</strong> Unit data, classes, chapters, supports, weapons, skills, and tactical mechanics.</p>
+</article>
+</section>
+<section class="content-section" id="jrpg-franchise-reference-2"><h2>JRPG franchise reference</h2>
+<article class="entry-card" data-search="86. megami tensei wiki"><h3>86. <a href="https://megamitensei.fandom.com/wiki/Megami_Tensei_Wiki" target="_blank" rel="noopener noreferrer">Megami Tensei Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Shin Megami Tensei, Persona, demons, skills, characters, locations, games, endings, and lore. It is useful for navigating a large interconnected franchise where demon compendiums, spell names, and mythological references recur in many forms.</p>
+<p class="best-for"><strong>Best for:</strong> Demon data, Persona references, skills, endings, characters, and franchise lore.</p>
+</article>
+<article class="entry-card" data-search="87. falcom wiki"><h3>87. <a href="https://falcom.wiki/" target="_blank" rel="noopener noreferrer">Falcom Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent community wiki for Nihon Falcom franchises such as Trails, Ys, and related series. It is useful for fans tracking characters, locations, story arcs, terminology, release information, and continuity across long-running JRPG worlds.</p>
+<p class="best-for"><strong>Best for:</strong> Trails and Ys lore, character pages, timeline connections, locations, and terminology.</p>
+</article>
+</section>
+<section class="content-section" id="mmo-and-rpg-3"><h2>MMO and RPG</h2>
+<article class="entry-card" data-search="88. ffxiclopedia"><h3>88. <a href="https://ffxiclopedia.fandom.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">FFXIclopedia</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Final Fantasy XI quests, missions, jobs, items, enemies, zones, crafting, endgame systems, and historical content. It is useful for a long-lived MMO where older guides, era-specific knowledge, and community terminology remain important.</p>
+<p class="best-for"><strong>Best for:</strong> Missions, jobs, crafting, zones, items, enemies, and legacy MMO systems.</p>
+</article>
+</section>
+<section class="content-section" id="mmo-learning-and-systems-reference"><h2>MMO learning and systems reference</h2>
+<article class="entry-card" data-search="89. eve university wiki"><h3>89. <a href="https://wiki.eveuniversity.org/Main_Page" target="_blank" rel="noopener noreferrer">EVE University Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A deep educational wiki for EVE Online ships, careers, fittings, corporations, industry, exploration, wormholes, PvP, PvE, markets, and new-player learning paths. It is especially valuable because EVE’s economy, risk model, and player organizations reward careful preparation.</p>
+<p class="best-for"><strong>Best for:</strong> New-player training, ship fitting, industry, exploration, PvP basics, and career planning.</p>
+</article>
+</section>
+<section class="content-section" id="space-sim-reference"><h2>Space sim reference</h2>
+<article class="entry-card" data-search="90. star citizen wiki"><h3>90. <a href="https://starcitizen.tools/" target="_blank" rel="noopener noreferrer">Star Citizen Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Star Citizen ships, locations, manufacturers, systems, missions, equipment, lore, development history, and in-game organizations. It is useful for tracking a large evolving space-sim project with many ships, components, and fictional companies.</p>
+<p class="best-for"><strong>Best for:</strong> Ship data, manufacturers, locations, equipment, lore, and development-related reference.</p>
+</article>
+<article class="entry-card" data-search="91. elite dangerous wiki"><h3>91. <a href="https://elite-dangerous.fandom.com/wiki/Elite_Dangerous_Wiki" target="_blank" rel="noopener noreferrer">Elite Dangerous Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Elite Dangerous ships, modules, engineers, commodities, factions, powerplay, exploration, combat, and galaxy mechanics. It is useful for commanders learning how equipment choices, engineering, trade routes, and exploration systems fit together.</p>
+<p class="best-for"><strong>Best for:</strong> Ship modules, engineering, commodities, exploration, factions, and pilot progression.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-console-franchises"><h2>Nintendo and console franchises</h2>
+<article class="entry-card" data-search="92. zelda wiki"><h3>92. <a href="https://zeldawiki.wiki/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Zelda Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent wiki for The Legend of Zelda series, covering games, dungeons, items, characters, enemies, locations, timelines, manga, and lore. It is useful for both gameplay reference and long-term series research because Zelda terminology and worldbuilding evolve across many entries.</p>
+<p class="best-for"><strong>Best for:</strong> Dungeons, items, characters, enemies, timelines, lore, and game-by-game references.</p>
+</article>
+<article class="entry-card" data-search="93. bulbapedia"><h3>93. <a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Bulbapedia</a></h3>
+<p class="description"><strong>Description:</strong> A community-driven Pokémon encyclopedia covering games, Pokémon species, moves, abilities, items, regions, anime, manga, trading cards, events, and mechanics. It is one of the broadest Pokémon references, with strong coverage across both gameplay and franchise media.</p>
+<p class="best-for"><strong>Best for:</strong> Pokémon species, moves, abilities, items, anime, manga, TCG, and event history.</p>
+</article>
+</section>
+<section class="content-section" id="pok-mon-data-and-tools"><h2>Pokémon data and tools</h2>
+<article class="entry-card" data-search="94. pokémon database"><h3>94. <a href="https://pokemondb.net/" target="_blank" rel="noopener noreferrer">Pokémon Database</a></h3>
+<p class="description"><strong>Description:</strong> A clean Pokémon reference site with Pokédex pages, moves, abilities, type charts, sprites, evolution chains, team tools, and game-specific data. It is not a wiki in the same sense as Bulbapedia, but it is fast and practical for exact battle and collection information.</p>
+<p class="best-for"><strong>Best for:</strong> Pokédex lookup, moves, abilities, type charts, evolution data, and team planning.</p>
+</article>
+</section>
+<section class="content-section" id="pok-mon-news-and-database"><h2>Pokémon news and database</h2>
+<article class="entry-card" data-search="95. serebii"><h3>95. <a href="https://www.serebii.net/" target="_blank" rel="noopener noreferrer">Serebii</a></h3>
+<p class="description"><strong>Description:</strong> A long-running Pokémon information site covering game news, event distributions, Pokédex data, move lists, TCG updates, anime information, and guides. It is useful for current franchise tracking and quick lookup, especially when events or new releases are changing frequently.</p>
+<p class="best-for"><strong>Best for:</strong> Pokémon news, event distributions, Pokédex pages, anime/TCG updates, and game guides.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-life-sim"><h2>Nintendo and life sim</h2>
+<article class="entry-card" data-search="96. nookipedia"><h3>96. <a href="https://nookipedia.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Nookipedia</a></h3>
+<p class="description"><strong>Description:</strong> An independent Animal Crossing wiki for villagers, items, events, locations, furniture, DIY recipes, bugs, fish, fossils, music, and game-specific mechanics. It is practical for collectors and decorators because Animal Crossing depends heavily on schedules, catalogs, and seasonal availability.</p>
+<p class="best-for"><strong>Best for:</strong> Villagers, item catalogs, events, DIY recipes, bugs, fish, fossils, and seasonal planning.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-console-franchises-2"><h2>Nintendo and console franchises</h2>
+<article class="entry-card" data-search="97. super mario wiki"><h3>97. <a href="https://www.mariowiki.com/Super_Mario_Wiki" target="_blank" rel="noopener noreferrer">Super Mario Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A major independent wiki for Mario games, characters, enemies, levels, items, power-ups, spin-offs, media, and series history. It is useful because the Mario franchise spans platformers, RPGs, sports games, party games, kart racing, animation, and print media.</p>
+<p class="best-for"><strong>Best for:</strong> Mario characters, levels, enemies, items, spin-offs, media, and franchise history.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-competitive-platform-fighting"><h2>Nintendo and competitive platform fighting</h2>
+<article class="entry-card" data-search="98. smashwiki"><h3>98. <a href="https://www.ssbwiki.com/" target="_blank" rel="noopener noreferrer">SmashWiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent wiki for Super Smash Bros. characters, stages, moves, mechanics, items, tournaments, players, terminology, and competitive history. It is useful for understanding both in-game systems and the long-running competitive culture around the series.</p>
+<p class="best-for"><strong>Best for:</strong> Move data, mechanics, stages, competitive terms, tournament history, and player pages.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-multiplayer-shooters"><h2>Nintendo and multiplayer shooters</h2>
+<article class="entry-card" data-search="99. inkipedia"><h3>99. <a href="https://splatoonwiki.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Inkipedia</a></h3>
+<p class="description"><strong>Description:</strong> An independent Splatoon wiki for weapons, gear, abilities, stages, modes, characters, brands, single-player content, Splatfests, and lore. It supports both casual collection goals and multiplayer learning in a series where equipment and map rotation matter.</p>
+<p class="best-for"><strong>Best for:</strong> Weapons, gear abilities, stages, modes, Splatfests, characters, and lore.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-console-franchises-3"><h2>Nintendo and console franchises</h2>
+<article class="entry-card" data-search="100. wikirby"><h3>100. <a href="https://wikirby.com/wiki/WiKirby" target="_blank" rel="noopener noreferrer">WiKirby</a></h3>
+<p class="description"><strong>Description:</strong> An independent Kirby wiki covering games, copy abilities, characters, enemies, bosses, locations, music, anime, manga, and series history. It is useful for a franchise with many recurring powers and charming continuity across platformers and spin-offs.</p>
+<p class="best-for"><strong>Best for:</strong> Copy abilities, characters, bosses, games, music, media, and series continuity.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-metroidvania-reference"><h2>Nintendo and metroidvania reference</h2>
+<article class="entry-card" data-search="101. metroid wiki"><h3>101. <a href="https://metroidwiki.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Metroid Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent Metroid wiki for games, planets, characters, enemies, upgrades, weapons, bosses, lore, and timeline material. It is useful for understanding exploration-gated progression and the series history behind one of the foundational metroidvania franchises.</p>
+<p class="best-for"><strong>Best for:</strong> Upgrades, bosses, planets, enemies, timeline reference, lore, and game pages.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-strategy-adventure"><h2>Nintendo and strategy adventure</h2>
+<article class="entry-card" data-search="102. pikipedia"><h3>102. <a href="https://www.pikminwiki.com/" target="_blank" rel="noopener noreferrer">Pikipedia</a></h3>
+<p class="description"><strong>Description:</strong> An independent Pikmin wiki covering species, treasures, enemies, areas, caves, plants, characters, collectibles, missions, and game mechanics. It is useful for completion routing because Pikmin games reward efficient planning around time, unit types, and environmental hazards.</p>
+<p class="best-for"><strong>Best for:</strong> Treasure locations, enemy data, Pikmin types, caves, missions, and completion planning.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-console-franchises-4"><h2>Nintendo and console franchises</h2>
+<article class="entry-card" data-search="103. lylat wiki"><h3>103. <a href="https://starfoxwiki.info/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Lylat Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent Star Fox wiki for games, characters, vehicles, planets, enemies, missions, weapons, and franchise media. It is useful for a compact but distinctive Nintendo series where branching routes, vehicles, and character lore vary across entries.</p>
+<p class="best-for"><strong>Best for:</strong> Star Fox games, characters, vehicles, planets, missions, and series history.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-platforming-franchises"><h2>Nintendo and platforming franchises</h2>
+<article class="entry-card" data-search="104. donkey kong wiki"><h3>104. <a href="https://donkeykong.fandom.com/wiki/Donkey_Kong_Wiki" target="_blank" rel="noopener noreferrer">Donkey Kong Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A dedicated wiki for Donkey Kong games, characters, enemies, levels, items, worlds, spin-offs, and related media. It is useful for tracking a franchise that spans arcade history, platformers, racing, rhythm games, and Mario-adjacent appearances.</p>
+<p class="best-for"><strong>Best for:</strong> Levels, characters, enemies, worlds, items, spin-offs, and franchise history.</p>
+</article>
+</section>
+<section class="content-section" id="nintendo-and-tactical-strategy"><h2>Nintendo and tactical strategy</h2>
+<article class="entry-card" data-search="105. wars wiki"><h3>105. <a href="https://warswiki.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Wars Wiki</a></h3>
+<p class="description"><strong>Description:</strong> An independent wiki for the Wars and Advance Wars series, covering commanders, units, maps, campaigns, mechanics, terrain, and mission data. It is useful for players studying tactical matchups, campaign objectives, and the differences between entries in the series.</p>
+<p class="best-for"><strong>Best for:</strong> Commanding officers, unit data, terrain, maps, campaign missions, and tactics.</p>
+</article>
+</section>
+<section class="content-section" id="esports-and-competitive-games"><h2>Esports and competitive games</h2>
+<article class="entry-card" data-search="106. liquipedia dota 2 wiki"><h3>106. <a href="https://liquipedia.net/dota2/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia Dota 2 Wiki</a></h3>
+<p class="description"><strong>Description:</strong> Liquipedia’s Dota 2 section documents tournaments, teams, players, transfers, matches, results, heroes, and competitive history. It is particularly useful for following the professional scene, checking event formats, and understanding how teams and rosters changed over time.</p>
+<p class="best-for"><strong>Best for:</strong> Tournaments, rosters, match histories, event formats, team pages, and player profiles.</p>
+</article>
+<article class="entry-card" data-search="107. liquipedia counter-strike wiki"><h3>107. <a href="https://liquipedia.net/counterstrike/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia Counter-Strike Wiki</a></h3>
+<p class="description"><strong>Description:</strong> Liquipedia’s Counter-Strike section covers CS2 and earlier competitive history, including tournaments, teams, players, maps, results, rankings, and roster moves. It is a strong source for event research and tracking the long-running professional Counter-Strike ecosystem.</p>
+<p class="best-for"><strong>Best for:</strong> Tournament results, rosters, player pages, map pools, rankings, and competitive history.</p>
+</article>
+<article class="entry-card" data-search="108. liquipedia league of legends wiki"><h3>108. <a href="https://liquipedia.net/leagueoflegends/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia League of Legends Wiki</a></h3>
+<p class="description"><strong>Description:</strong> Liquipedia’s League of Legends section focuses on professional tournaments, regional leagues, teams, players, transfers, champions in competitive context, and match results. It complements the official gameplay wiki by concentrating on esports structure and history.</p>
+<p class="best-for"><strong>Best for:</strong> Regional leagues, Worlds history, team rosters, player profiles, transfers, and match results.</p>
+</article>
+<article class="entry-card" data-search="109. liquipedia valorant wiki"><h3>109. <a href="https://liquipedia.net/valorant/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia VALORANT Wiki</a></h3>
+<p class="description"><strong>Description:</strong> Liquipedia’s VALORANT section tracks tournaments, agents in competitive contexts, teams, players, match results, regional circuits, and roster movement. It is useful for following a fast-changing esport where team lineups and regional qualification paths matter.</p>
+<p class="best-for"><strong>Best for:</strong> VCT events, teams, players, match results, roster moves, and regional coverage.</p>
+</article>
+<article class="entry-card" data-search="110. liquipedia rocket league wiki"><h3>110. <a href="https://liquipedia.net/rocketleague/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia Rocket League Wiki</a></h3>
+<p class="description"><strong>Description:</strong> Liquipedia’s Rocket League section documents tournaments, teams, players, results, transfers, and competitive seasons. It is useful for fans who want clean bracket information, historical placements, and context around regional and international Rocket League competition.</p>
+<p class="best-for"><strong>Best for:</strong> Tournament brackets, teams, players, RLCS history, transfers, and regional results.</p>
+</article>
+<article class="entry-card" data-search="111. liquipedia starcraft ii wiki"><h3>111. <a href="https://liquipedia.net/starcraft2/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia StarCraft II Wiki</a></h3>
+<p class="description"><strong>Description:</strong> Liquipedia’s StarCraft II section is a deep esports reference for tournaments, players, teams, maps, matchups, races, builds, and competitive history. It is especially valuable because StarCraft has a long professional timeline and a rich strategic vocabulary.</p>
+<p class="best-for"><strong>Best for:</strong> Tournament history, player profiles, builds, maps, matchups, and competitive statistics.</p>
+</article>
+<article class="entry-card" data-search="112. liquipedia overwatch wiki"><h3>112. <a href="https://liquipedia.net/overwatch/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia Overwatch Wiki</a></h3>
+<p class="description"><strong>Description:</strong> Liquipedia’s Overwatch section covers tournaments, teams, players, transfers, heroes in competitive context, match results, and historical league information. It is useful for tracking roster movement and understanding the structure of professional Overwatch events.</p>
+<p class="best-for"><strong>Best for:</strong> Teams, players, match results, tournament formats, roster moves, and event history.</p>
+</article>
+<article class="entry-card" data-search="113. liquipedia rainbow six wiki"><h3>113. <a href="https://liquipedia.net/rainbowsix/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia Rainbow Six Wiki</a></h3>
+<p class="description"><strong>Description:</strong> Liquipedia’s Rainbow Six section documents Siege tournaments, players, teams, operators in competitive settings, match results, and regional circuits. It is useful for understanding a tactical esport where map pools, regional leagues, and roster changes shape results.</p>
+<p class="best-for"><strong>Best for:</strong> Tournament coverage, rosters, players, maps, regional leagues, and match histories.</p>
+</article>
+<article class="entry-card" data-search="114. liquipedia apex legends wiki"><h3>114. <a href="https://liquipedia.net/apexlegends/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia Apex Legends Wiki</a></h3>
+<p class="description"><strong>Description:</strong> Liquipedia’s Apex Legends section covers tournaments, teams, players, legends in competitive context, match results, formats, and regional standings. It is useful for following battle royale competition where placement points, rosters, and LAN qualification paths can be complex.</p>
+<p class="best-for"><strong>Best for:</strong> ALGS events, teams, player pages, standings, tournament formats, and match results.</p>
+</article>
+</section>
+<section class="content-section" id="competitive-moba-gameplay-reference"><h2>Competitive MOBA gameplay reference</h2>
+<article class="entry-card" data-search="115. league of legends wiki"><h3>115. <a href="https://wiki.leagueoflegends.com/en-us/" target="_blank" rel="noopener noreferrer">League of Legends Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The official League of Legends wiki provides player-authored information on champions, abilities, items, runes, skins, maps, mechanics, game modes, patch-to-patch changes, and lore. It is the gameplay-focused counterpart to esports databases and is useful for exact mechanics and historical changes.</p>
+<p class="best-for"><strong>Best for:</strong> Champion abilities, items, runes, skins, mechanics, patches, and lore reference.</p>
+</article>
+<article class="entry-card" data-search="116. dota 2 wiki"><h3>116. <a href="https://dota2.fandom.com/wiki/Dota_2_Wiki" target="_blank" rel="noopener noreferrer">Dota 2 Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Dota 2 heroes, abilities, items, neutral items, mechanics, game modes, cosmetics, patches, and terminology. It is useful for players checking exact interactions in a complex MOBA with many edge cases and frequent balance changes.</p>
+<p class="best-for"><strong>Best for:</strong> Hero abilities, items, mechanics, patch history, cosmetics, and terminology.</p>
+</article>
+</section>
+<section class="content-section" id="competitive-and-class-based-fps-reference"><h2>Competitive and class-based FPS reference</h2>
+<article class="entry-card" data-search="117. official team fortress wiki"><h3>117. <a href="https://wiki.teamfortress.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Official Team Fortress Wiki</a></h3>
+<p class="description"><strong>Description:</strong> The official Team Fortress wiki for Team Fortress and Team Fortress 2, covering classes, weapons, items, maps, updates, cosmetics, achievements, mechanics, and community content. It is useful for both gameplay reference and the unusual economy/cosmetic history around TF2.</p>
+<p class="best-for"><strong>Best for:</strong> Classes, weapons, maps, items, updates, achievements, cosmetics, and TF2 history.</p>
+</article>
+</section>
+<section class="content-section" id="tactical-fps-gameplay-reference"><h2>Tactical FPS gameplay reference</h2>
+<article class="entry-card" data-search="118. valorant wiki"><h3>118. <a href="https://valorant.fandom.com/wiki/VALORANT_Wiki" target="_blank" rel="noopener noreferrer">VALORANT Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for VALORANT agents, abilities, weapons, maps, skins, game modes, cosmetics, battle passes, and patches. It complements esports resources by focusing on the gameplay objects and cosmetic systems players encounter directly.</p>
+<p class="best-for"><strong>Best for:</strong> Agents, abilities, weapons, maps, skins, modes, patches, and cosmetic collections.</p>
+</article>
+</section>
+<section class="content-section" id="gacha-mobile-and-live-service-rpgs"><h2>Gacha, mobile, and live-service RPGs</h2>
+<article class="entry-card" data-search="119. genshin impact wiki"><h3>119. <a href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki" target="_blank" rel="noopener noreferrer">Genshin Impact Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Genshin Impact characters, weapons, artifacts, quests, events, enemies, regions, materials, achievements, and lore. It is useful for tracking a content-rich live-service RPG where character builds and material farming require careful planning.</p>
+<p class="best-for"><strong>Best for:</strong> Character materials, artifact sets, quests, events, regions, achievements, and lore.</p>
+</article>
+<article class="entry-card" data-search="120. honkai: star rail wiki"><h3>120. <a href="https://honkai-star-rail.fandom.com/wiki/Honkai:_Star_Rail_Wiki" target="_blank" rel="noopener noreferrer">Honkai: Star Rail Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Honkai: Star Rail characters, light cones, relics, missions, events, enemies, worlds, achievements, and story terminology. It is practical for build planning and for tracking live-service events and resource requirements across patches.</p>
+<p class="best-for"><strong>Best for:</strong> Character builds, light cones, relics, missions, event tracking, and story reference.</p>
+</article>
+</section>
+<section class="content-section" id="gacha-mobile-and-live-service-action-rpgs"><h2>Gacha, mobile, and live-service action RPGs</h2>
+<article class="entry-card" data-search="121. zenless zone zero wiki"><h3>121. <a href="https://zenless-zone-zero.fandom.com/wiki/Zenless_Zone_Zero_Wiki" target="_blank" rel="noopener noreferrer">Zenless Zone Zero Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Zenless Zone Zero agents, W-Engines, Drive Discs, Bangboo, factions, missions, events, enemies, and combat systems. It is useful for players comparing character roles, build components, and the terminology of New Eridu.</p>
+<p class="best-for"><strong>Best for:</strong> Agents, W-Engines, Drive Discs, Bangboo, missions, events, and combat mechanics.</p>
+</article>
+<article class="entry-card" data-search="122. wuthering waves wiki"><h3>122. <a href="https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki" target="_blank" rel="noopener noreferrer">Wuthering Waves Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Wuthering Waves resonators, weapons, echoes, quests, events, regions, enemies, materials, and combat systems. It is useful for planning character progression and understanding the echo-based build structure at the center of the game.</p>
+<p class="best-for"><strong>Best for:</strong> Resonators, echoes, weapons, materials, quests, events, and combat systems.</p>
+</article>
+</section>
+<section class="content-section" id="gacha-mobile-and-tactical-rpgs"><h2>Gacha, mobile, and tactical RPGs</h2>
+<article class="entry-card" data-search="123. arknights terra wiki"><h3>123. <a href="https://arknights.wiki.gg/" target="_blank" rel="noopener noreferrer">Arknights Terra Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A wiki.gg-hosted reference for Arknights operators, skills, modules, stages, enemies, events, materials, base systems, and story/lore. It is valuable for tactical planning because operator roles, upgrade materials, and event stages all benefit from clear data.</p>
+<p class="best-for"><strong>Best for:</strong> Operator data, skills, modules, stages, enemies, materials, and event planning.</p>
+</article>
+<article class="entry-card" data-search="124. blue archive wiki"><h3>124. <a href="https://bluearchive.wiki/wiki/Main_Page" target="_blank" rel="noopener noreferrer">Blue Archive Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Blue Archive students, skills, equipment, stages, raids, events, story, enemies, and progression systems. It is useful for comparing student roles, planning upgrades, and understanding event rewards in a character-collection structure.</p>
+<p class="best-for"><strong>Best for:</strong> Student data, raids, skills, equipment, events, story, and progression planning.</p>
+</article>
+</section>
+<section class="content-section" id="gacha-mobile-and-fleet-collection"><h2>Gacha, mobile, and fleet collection</h2>
+<article class="entry-card" data-search="125. azur lane wiki"><h3>125. <a href="https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki" target="_blank" rel="noopener noreferrer">Azur Lane Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A dedicated Azur Lane wiki for ships, equipment, maps, events, commissions, skins, retrofit data, construction pools, and mechanics. It is useful for fleet planning, event farming, and understanding ship roles across a large character roster.</p>
+<p class="best-for"><strong>Best for:</strong> Ship data, equipment, maps, events, retrofits, construction pools, and fleet planning.</p>
+</article>
+</section>
+<section class="content-section" id="gacha-mobile-and-rpg-reference"><h2>Gacha, mobile, and RPG reference</h2>
+<article class="entry-card" data-search="126. granblue fantasy wiki"><h3>126. <a href="https://gbf.wiki/" target="_blank" rel="noopener noreferrer">Granblue Fantasy Wiki</a></h3>
+<p class="description"><strong>Description:</strong> A community wiki for Granblue Fantasy characters, weapons, summons, raids, events, classes, quests, grids, and mechanics. It is valuable because the game’s team-building and weapon-grid systems reward detailed reference work and long-term resource planning.</p>
+<p class="best-for"><strong>Best for:</strong> Characters, weapon grids, raids, events, classes, summons, and progression planning.</p>
+</article>
+</section>
+<hr />
+<section class="content-section" id="source-and-verification-notes"><h2>Source and Verification Notes</h2>
+<ul>
+<li>The direct link in each entry is the primary reference for that website.</li>
+<li>During compilation, several platform-level and site-specific pages were checked, including <a href="https://www.wiki.gg/wikis" target="_blank" rel="noopener noreferrer">wiki.gg's wiki directory</a>, <a href="https://www.pcgamingwiki.com/wiki/Home" target="_blank" rel="noopener noreferrer">PCGamingWiki</a>, <a href="https://liquipedia.net/esports/Main_Page" target="_blank" rel="noopener noreferrer">Liquipedia</a>, <a href="https://sts2.io/en/" target="_blank" rel="noopener noreferrer">STS2.io</a>, <a href="https://www.megacrit.com/news/2026-03-05-early-access-launch/" target="_blank" rel="noopener noreferrer">Mega Crit's Slay the Spire 2 early-access launch post</a>, and <a href="https://www.leagueoflegends.com/en-sg/news/announcements/the-official-league-of-legends-wiki/" target="_blank" rel="noopener noreferrer">Riot Games' official League of Legends Wiki announcement</a>.</li>
+<li>Some entries are databases or guide hubs rather than strict editable wikis; they are included because they serve the same practical reference role for players and researchers.</li>
+</ul>
+</section>
+<section class="content-section" id="maintenance-suggestions"><h2>Maintenance Suggestions</h2>
+<ul>
+<li>Re-check links every few months, especially for live-service games and recently migrated community wikis.</li>
+</ul>
+<ul>
+<li>Consider adding tags such as <code>official</code>, <code>independent</code>, <code>wiki.gg</code>, <code>Fandom</code>, <code>database</code>, <code>esports</code>, <code>modding</code>, and <code>speedrun</code> if this list becomes a public repository.</li>
+</ul>
+<ul>
+<li>For patch-sensitive mechanics, prefer pages with visible revision histories, changelog references, or active editor communities.</li>
+</ul>
+<ul>
+<li>For communities migrating away from older hosts, link to the current community-preferred site rather than the highest-search-ranking mirror when that preference is clear.</li>
+</ul>
+</section>
+<section class="content-section" id="suggested-repository-name"><h2>Suggested Repository Name</h2>
+<p><code>awesome-game-wiki</code></p>
+</section>
+<section class="content-section" id="short-readme-blurb"><h2>Short README Blurb</h2>
+<p>A curated list of game wikis, databases, esports references, modding documentation, and community knowledge hubs for players, editors, researchers, and guide writers.</p>
+</section>
+    <footer class="footer">
+      <p>Generated from <code>awesome-game-wiki.md</code>. Links open in a new tab.</p>
+    </footer>
+  </div>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const count = document.getElementById('entryCount');
+    const entries = Array.from(document.querySelectorAll('.entry-card'));
+    function applySearch() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      for (const entry of entries) {
+        const haystack = entry.textContent.toLowerCase();
+        const match = !query || haystack.includes(query);
+        entry.classList.toggle('hidden', !match);
+        if (match) visible += 1;
+      }
+      count.textContent = query ? visible + ' of ' + entries.length + ' entries' : entries.length + ' entries';
+    }
+    searchInput.addEventListener('input', applySearch);
+  </script>
+</body>
+</html>
