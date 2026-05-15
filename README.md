@@ -1,6 +1,6 @@
 # Awesome Game Wiki
 
-A curated, English-language collection of 125 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
+A curated, English-language collection of 126 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
 
 **Last reviewed:** 2026-05-14  
 
@@ -637,16 +637,26 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 **Best for:** Cards, relics, class builds, boss preparation, monster lookup, route planning, and fast Slay the Spire 2 study.
 
 
+## Turn-based roguelite guide hub
+
+### 64. [Vampire Crawlers Guide](https://vampirecrawlers.net/)
+
+**Description:** A focused guide site for Vampire Crawlers, with mobile-friendly pages for Turboturn card order, dungeon routes, crawler builds, boss tactics, gear choices, patch notes, and searchable reference data. It is useful as a compact companion for players who want route and build advice without browsing a general-purpose wiki.
+
+
+**Best for:** Turboturn sequencing, dungeon route planning, crawler builds, boss preparation, gear choices, and quick run reference.
+
+
 ## MMO and RPG
 
-### 64. [Old School RuneScape Wiki](https://oldschool.runescape.wiki/)
+### 65. [Old School RuneScape Wiki](https://oldschool.runescape.wiki/)
 
 **Description:** A major independent wiki for Old School RuneScape quests, items, skills, monsters, bosses, minigames, maps, calculators, money-making methods, and game updates. It is one of the best examples of a player-maintained MMO wiki with deep practical tools and extensive editorial coverage.
 
 
 **Best for:** Quest guides, skilling, bossing, item lookup, calculators, and economy-aware planning.
 
-### 65. [RuneScape Wiki](https://runescape.wiki/)
+### 66. [RuneScape Wiki](https://runescape.wiki/)
 
 **Description:** The independent wiki for modern RuneScape, covering quests, skills, items, bosses, lore, achievements, events, and calculators. It is valuable for a live MMO where long-term account progress, repeated updates, and deep systems create a constant need for accurate reference material.
 
@@ -656,14 +666,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Action RPG
 
-### 66. [Path of Exile Wiki](https://www.poewiki.net/)
+### 67. [Path of Exile Wiki](https://www.poewiki.net/)
 
 **Description:** The official Path of Exile wiki, maintained by the community and hosted by Grinding Gear Games, covering skills, items, passives, gems, leagues, bosses, mechanics, and crafting systems. It is essential for a game where precise wording and item interactions define build planning.
 
 
 **Best for:** Skill gems, passive mechanics, unique items, crafting, league systems, and boss reference.
 
-### 67. [Path of Exile 2 Wiki](https://www.poe2wiki.net/)
+### 68. [Path of Exile 2 Wiki](https://www.poe2wiki.net/)
 
 **Description:** A dedicated community wiki for Path of Exile 2 skills, supports, classes, ascendancies, items, bosses, campaign areas, crafting, and systems. It is useful for players separating sequel-specific mechanics from original Path of Exile assumptions.
 
@@ -673,14 +683,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## MMO and RPG
 
-### 68. [Guild Wars 2 Wiki](https://wiki.guildwars2.com/wiki/Main_Page)
+### 69. [Guild Wars 2 Wiki](https://wiki.guildwars2.com/wiki/Main_Page)
 
 **Description:** The official Guild Wars 2 wiki, written and maintained by players, with pages for professions, events, maps, items, achievements, masteries, story, raids, fractals, and living world content. Its in-game /wiki integration makes it especially convenient during active play.
 
 
 **Best for:** Event timers, achievements, maps, profession mechanics, currencies, and story content.
 
-### 69. [Final Fantasy XIV Online Wiki](https://ffxiv.consolegameswiki.com/wiki/FF14_Wiki)
+### 70. [Final Fantasy XIV Online Wiki](https://ffxiv.consolegameswiki.com/wiki/FF14_Wiki)
 
 **Description:** A comprehensive player-maintained reference for Final Fantasy XIV jobs, quests, duties, trials, raids, crafting, gathering, mounts, minions, achievements, and patch content. It is useful for both new players unlocking systems and experienced players checking exact rewards or requirements.
 
@@ -690,7 +700,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## MMO and franchise lore
 
-### 70. [Warcraft Wiki](https://warcraft.wiki.gg/)
+### 71. [Warcraft Wiki](https://warcraft.wiki.gg/)
 
 **Description:** An officially recognized wiki for the Warcraft universe, with strong coverage of World of Warcraft, Warcraft strategy games, lore, characters, zones, items, quests, novels, comics, and historical timeline material. It is useful for gameplay context and franchise-level research.
 
@@ -700,7 +710,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## World of Warcraft database and guides
 
-### 71. [Wowhead](https://www.wowhead.com/)
+### 72. [Wowhead](https://www.wowhead.com/)
 
 **Description:** A large World of Warcraft information site with item databases, news, guides, talent tools, comments, class resources, profession pages, transmog references, and patch coverage. It complements wiki-style lore pages by emphasizing live gameplay data and player-facing optimization.
 
@@ -710,14 +720,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## RPG franchise reference
 
-### 72. [Unofficial Elder Scrolls Pages (UESP)](https://en.uesp.net/wiki/Main_Page)
+### 73. [Unofficial Elder Scrolls Pages (UESP)](https://en.uesp.net/wiki/Main_Page)
 
 **Description:** A long-running independent Elder Scrolls wiki covering Arena through Skyrim, Online, spin-offs, lore, quests, locations, NPCs, items, factions, mechanics, and mod-adjacent technical notes. It is known for depth, careful documentation, and strong franchise-wide continuity.
 
 
 **Best for:** Elder Scrolls quests, lore, NPCs, maps, mechanics, and historical franchise research.
 
-### 73. [Independent Fallout Wiki](https://fallout.wiki/wiki/Fallout_Wiki)
+### 74. [Independent Fallout Wiki](https://fallout.wiki/wiki/Fallout_Wiki)
 
 **Description:** An independent wiki for the Fallout series, covering quests, characters, locations, factions, weapons, perks, timeline events, development notes, and game-specific mechanics. It is valuable for players and lore readers who want a focused, franchise-wide reference outside a general-purpose host.
 
@@ -727,7 +737,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## CRPG and Dungeons & Dragons systems
 
-### 74. [BG3 Wiki](https://bg3.wiki/)
+### 75. [BG3 Wiki](https://bg3.wiki/)
 
 **Description:** An independent wiki for Baldur’s Gate 3 spells, classes, subclasses, items, quests, companions, conditions, locations, mechanics, and choices. It is extremely useful for a rules-heavy CRPG where builds, dialogue outcomes, and hidden interactions benefit from precise documentation.
 
@@ -737,14 +747,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## RPG franchise reference
 
-### 75. [Dragon Age Wiki](https://dragonage.fandom.com/wiki/Dragon_Age_Wiki)
+### 76. [Dragon Age Wiki](https://dragonage.fandom.com/wiki/Dragon_Age_Wiki)
 
 **Description:** A community wiki for Dragon Age games, characters, companions, quests, locations, codex entries, factions, items, classes, and lore. It is useful for tracking narrative continuity, companion relationships, and worldbuilding across a multi-game BioWare franchise.
 
 
 **Best for:** Companion pages, quest reference, codex lore, factions, classes, and timeline continuity.
 
-### 76. [Mass Effect Wiki](https://masseffect.fandom.com/wiki/Mass_Effect_Wiki)
+### 77. [Mass Effect Wiki](https://masseffect.fandom.com/wiki/Mass_Effect_Wiki)
 
 **Description:** A community wiki for Mass Effect characters, missions, planets, species, ships, weapons, powers, choices, codex entries, and lore. It is especially useful for understanding long-running narrative consequences and the science-fiction setting across the trilogy and later entries.
 
@@ -754,7 +764,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## RPG franchise and transmedia lore
 
-### 77. [The Witcher Wiki](https://witcher.fandom.com/wiki/Witcher_Wiki)
+### 78. [The Witcher Wiki](https://witcher.fandom.com/wiki/Witcher_Wiki)
 
 **Description:** A community wiki for The Witcher games, books, characters, locations, monsters, quests, alchemy, equipment, signs, and lore. It is useful because the franchise spans novels, games, and adaptations, requiring cross-media context for many names and events.
 
@@ -764,7 +774,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## RPG franchise and setting reference
 
-### 78. [Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Cyberpunk_Wiki)
+### 79. [Cyberpunk Wiki](https://cyberpunk.fandom.com/wiki/Cyberpunk_Wiki)
 
 **Description:** A community wiki for Cyberpunk 2077, Phantom Liberty, Cyberpunk RED, characters, locations, corporations, cyberware, weapons, missions, vehicles, and setting lore. It is useful for connecting tabletop background with the game’s quests, people, and Night City history.
 
@@ -774,7 +784,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Action RPG franchise reference
 
-### 79. [Diablo Wiki](https://diablo.fandom.com/wiki/Diablo_Wiki)
+### 80. [Diablo Wiki](https://diablo.fandom.com/wiki/Diablo_Wiki)
 
 **Description:** A community wiki for Diablo games, classes, monsters, items, locations, lore, skills, acts, bosses, and franchise history. It is useful for broad series research, especially when comparing how concepts such as Prime Evils, classes, and world regions appear across entries.
 
@@ -784,7 +794,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Action RPG guides and build reference
 
-### 80. [Maxroll Diablo 4 Wiki](https://maxroll.gg/d4/wiki)
+### 81. [Maxroll Diablo 4 Wiki](https://maxroll.gg/d4/wiki)
 
 **Description:** A guide-driven Diablo 4 knowledge base with builds, tier lists, mechanics explanations, item references, boss guides, endgame systems, and seasonal resources. It is practical for players who want current build planning and structured optimization rather than only encyclopedic lore.
 
@@ -794,7 +804,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Action RPG
 
-### 81. [Grim Dawn Wiki](https://grimdawn.fandom.com/wiki/Grim_Dawn_Wiki)
+### 82. [Grim Dawn Wiki](https://grimdawn.fandom.com/wiki/Grim_Dawn_Wiki)
 
 **Description:** A community wiki for Grim Dawn masteries, skills, devotion, items, factions, quests, monsters, locations, crafting, and DLC. It is useful for understanding build foundations in a game where class combinations and devotion paths create many viable character directions.
 
@@ -804,7 +814,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Action RPG and hunting
 
-### 82. [Monster Hunter Wiki](https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki)
+### 83. [Monster Hunter Wiki](https://monsterhunter.fandom.com/wiki/Monster_Hunter_Wiki)
 
 **Description:** A community wiki for the Monster Hunter franchise, covering monsters, weapons, armor, skills, items, locations, quests, ecology, and series history. It is valuable for comparing monster behavior and equipment across games with long-running mechanical traditions.
 
@@ -814,7 +824,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## JRPG franchise reference
 
-### 83. [Dragon Quest Wiki](https://dragonquestwiki.com/)
+### 84. [Dragon Quest Wiki](https://dragonquestwiki.com/)
 
 **Description:** An independent wiki for the Dragon Quest series, covering games, characters, monsters, spells, equipment, locations, classes, story elements, and localization details. It is useful for a franchise with many recurring creatures, terminology, and design traditions.
 
@@ -824,7 +834,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Tactical RPG franchise reference
 
-### 84. [Fire Emblem Wiki](https://fireemblemwiki.org/)
+### 85. [Fire Emblem Wiki](https://fireemblemwiki.org/)
 
 **Description:** An independent wiki for Fire Emblem games, characters, classes, chapters, weapons, skills, supports, maps, and mechanics. It is useful for comparing units, planning routes, and understanding how recurring tactical systems change across entries.
 
@@ -834,14 +844,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## JRPG franchise reference
 
-### 85. [Megami Tensei Wiki](https://megamitensei.fandom.com/wiki/Megami_Tensei_Wiki)
+### 86. [Megami Tensei Wiki](https://megamitensei.fandom.com/wiki/Megami_Tensei_Wiki)
 
 **Description:** A community wiki for Shin Megami Tensei, Persona, demons, skills, characters, locations, games, endings, and lore. It is useful for navigating a large interconnected franchise where demon compendiums, spell names, and mythological references recur in many forms.
 
 
 **Best for:** Demon data, Persona references, skills, endings, characters, and franchise lore.
 
-### 86. [Falcom Wiki](https://falcom.wiki/)
+### 87. [Falcom Wiki](https://falcom.wiki/)
 
 **Description:** An independent community wiki for Nihon Falcom franchises such as Trails, Ys, and related series. It is useful for fans tracking characters, locations, story arcs, terminology, release information, and continuity across long-running JRPG worlds.
 
@@ -851,7 +861,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## MMO and RPG
 
-### 87. [FFXIclopedia](https://ffxiclopedia.fandom.com/wiki/Main_Page)
+### 88. [FFXIclopedia](https://ffxiclopedia.fandom.com/wiki/Main_Page)
 
 **Description:** A community wiki for Final Fantasy XI quests, missions, jobs, items, enemies, zones, crafting, endgame systems, and historical content. It is useful for a long-lived MMO where older guides, era-specific knowledge, and community terminology remain important.
 
@@ -861,7 +871,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## MMO learning and systems reference
 
-### 88. [EVE University Wiki](https://wiki.eveuniversity.org/Main_Page)
+### 89. [EVE University Wiki](https://wiki.eveuniversity.org/Main_Page)
 
 **Description:** A deep educational wiki for EVE Online ships, careers, fittings, corporations, industry, exploration, wormholes, PvP, PvE, markets, and new-player learning paths. It is especially valuable because EVE’s economy, risk model, and player organizations reward careful preparation.
 
@@ -871,14 +881,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Space sim reference
 
-### 89. [Star Citizen Wiki](https://starcitizen.tools/)
+### 90. [Star Citizen Wiki](https://starcitizen.tools/)
 
 **Description:** A community wiki for Star Citizen ships, locations, manufacturers, systems, missions, equipment, lore, development history, and in-game organizations. It is useful for tracking a large evolving space-sim project with many ships, components, and fictional companies.
 
 
 **Best for:** Ship data, manufacturers, locations, equipment, lore, and development-related reference.
 
-### 90. [Elite Dangerous Wiki](https://elite-dangerous.fandom.com/wiki/Elite_Dangerous_Wiki)
+### 91. [Elite Dangerous Wiki](https://elite-dangerous.fandom.com/wiki/Elite_Dangerous_Wiki)
 
 **Description:** A community wiki for Elite Dangerous ships, modules, engineers, commodities, factions, powerplay, exploration, combat, and galaxy mechanics. It is useful for commanders learning how equipment choices, engineering, trade routes, and exploration systems fit together.
 
@@ -888,14 +898,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and console franchises
 
-### 91. [Zelda Wiki](https://zeldawiki.wiki/wiki/Main_Page)
+### 92. [Zelda Wiki](https://zeldawiki.wiki/wiki/Main_Page)
 
 **Description:** An independent wiki for The Legend of Zelda series, covering games, dungeons, items, characters, enemies, locations, timelines, manga, and lore. It is useful for both gameplay reference and long-term series research because Zelda terminology and worldbuilding evolve across many entries.
 
 
 **Best for:** Dungeons, items, characters, enemies, timelines, lore, and game-by-game references.
 
-### 92. [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Main_Page)
+### 93. [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Main_Page)
 
 **Description:** A community-driven Pokémon encyclopedia covering games, Pokémon species, moves, abilities, items, regions, anime, manga, trading cards, events, and mechanics. It is one of the broadest Pokémon references, with strong coverage across both gameplay and franchise media.
 
@@ -905,7 +915,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Pokémon data and tools
 
-### 93. [Pokémon Database](https://pokemondb.net/)
+### 94. [Pokémon Database](https://pokemondb.net/)
 
 **Description:** A clean Pokémon reference site with Pokédex pages, moves, abilities, type charts, sprites, evolution chains, team tools, and game-specific data. It is not a wiki in the same sense as Bulbapedia, but it is fast and practical for exact battle and collection information.
 
@@ -915,7 +925,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Pokémon news and database
 
-### 94. [Serebii](https://www.serebii.net/)
+### 95. [Serebii](https://www.serebii.net/)
 
 **Description:** A long-running Pokémon information site covering game news, event distributions, Pokédex data, move lists, TCG updates, anime information, and guides. It is useful for current franchise tracking and quick lookup, especially when events or new releases are changing frequently.
 
@@ -925,7 +935,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and life sim
 
-### 95. [Nookipedia](https://nookipedia.com/wiki/Main_Page)
+### 96. [Nookipedia](https://nookipedia.com/wiki/Main_Page)
 
 **Description:** An independent Animal Crossing wiki for villagers, items, events, locations, furniture, DIY recipes, bugs, fish, fossils, music, and game-specific mechanics. It is practical for collectors and decorators because Animal Crossing depends heavily on schedules, catalogs, and seasonal availability.
 
@@ -935,7 +945,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and console franchises
 
-### 96. [Super Mario Wiki](https://www.mariowiki.com/Super_Mario_Wiki)
+### 97. [Super Mario Wiki](https://www.mariowiki.com/Super_Mario_Wiki)
 
 **Description:** A major independent wiki for Mario games, characters, enemies, levels, items, power-ups, spin-offs, media, and series history. It is useful because the Mario franchise spans platformers, RPGs, sports games, party games, kart racing, animation, and print media.
 
@@ -945,7 +955,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and competitive platform fighting
 
-### 97. [SmashWiki](https://www.ssbwiki.com/)
+### 98. [SmashWiki](https://www.ssbwiki.com/)
 
 **Description:** An independent wiki for Super Smash Bros. characters, stages, moves, mechanics, items, tournaments, players, terminology, and competitive history. It is useful for understanding both in-game systems and the long-running competitive culture around the series.
 
@@ -955,7 +965,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and multiplayer shooters
 
-### 98. [Inkipedia](https://splatoonwiki.org/wiki/Main_Page)
+### 99. [Inkipedia](https://splatoonwiki.org/wiki/Main_Page)
 
 **Description:** An independent Splatoon wiki for weapons, gear, abilities, stages, modes, characters, brands, single-player content, Splatfests, and lore. It supports both casual collection goals and multiplayer learning in a series where equipment and map rotation matter.
 
@@ -965,7 +975,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and console franchises
 
-### 99. [WiKirby](https://wikirby.com/wiki/WiKirby)
+### 100. [WiKirby](https://wikirby.com/wiki/WiKirby)
 
 **Description:** An independent Kirby wiki covering games, copy abilities, characters, enemies, bosses, locations, music, anime, manga, and series history. It is useful for a franchise with many recurring powers and charming continuity across platformers and spin-offs.
 
@@ -975,7 +985,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and metroidvania reference
 
-### 100. [Metroid Wiki](https://metroidwiki.org/wiki/Main_Page)
+### 101. [Metroid Wiki](https://metroidwiki.org/wiki/Main_Page)
 
 **Description:** An independent Metroid wiki for games, planets, characters, enemies, upgrades, weapons, bosses, lore, and timeline material. It is useful for understanding exploration-gated progression and the series history behind one of the foundational metroidvania franchises.
 
@@ -985,7 +995,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and strategy adventure
 
-### 101. [Pikipedia](https://www.pikminwiki.com/)
+### 102. [Pikipedia](https://www.pikminwiki.com/)
 
 **Description:** An independent Pikmin wiki covering species, treasures, enemies, areas, caves, plants, characters, collectibles, missions, and game mechanics. It is useful for completion routing because Pikmin games reward efficient planning around time, unit types, and environmental hazards.
 
@@ -995,7 +1005,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and console franchises
 
-### 102. [Lylat Wiki](https://starfoxwiki.info/wiki/Main_Page)
+### 103. [Lylat Wiki](https://starfoxwiki.info/wiki/Main_Page)
 
 **Description:** An independent Star Fox wiki for games, characters, vehicles, planets, enemies, missions, weapons, and franchise media. It is useful for a compact but distinctive Nintendo series where branching routes, vehicles, and character lore vary across entries.
 
@@ -1005,7 +1015,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and platforming franchises
 
-### 103. [Donkey Kong Wiki](https://donkeykong.fandom.com/wiki/Donkey_Kong_Wiki)
+### 104. [Donkey Kong Wiki](https://donkeykong.fandom.com/wiki/Donkey_Kong_Wiki)
 
 **Description:** A dedicated wiki for Donkey Kong games, characters, enemies, levels, items, worlds, spin-offs, and related media. It is useful for tracking a franchise that spans arcade history, platformers, racing, rhythm games, and Mario-adjacent appearances.
 
@@ -1015,7 +1025,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Nintendo and tactical strategy
 
-### 104. [Wars Wiki](https://warswiki.org/wiki/Main_Page)
+### 105. [Wars Wiki](https://warswiki.org/wiki/Main_Page)
 
 **Description:** An independent wiki for the Wars and Advance Wars series, covering commanders, units, maps, campaigns, mechanics, terrain, and mission data. It is useful for players studying tactical matchups, campaign objectives, and the differences between entries in the series.
 
@@ -1025,63 +1035,63 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Esports and competitive games
 
-### 105. [Liquipedia Dota 2 Wiki](https://liquipedia.net/dota2/Main_Page)
+### 106. [Liquipedia Dota 2 Wiki](https://liquipedia.net/dota2/Main_Page)
 
 **Description:** Liquipedia’s Dota 2 section documents tournaments, teams, players, transfers, matches, results, heroes, and competitive history. It is particularly useful for following the professional scene, checking event formats, and understanding how teams and rosters changed over time.
 
 
 **Best for:** Tournaments, rosters, match histories, event formats, team pages, and player profiles.
 
-### 106. [Liquipedia Counter-Strike Wiki](https://liquipedia.net/counterstrike/Main_Page)
+### 107. [Liquipedia Counter-Strike Wiki](https://liquipedia.net/counterstrike/Main_Page)
 
 **Description:** Liquipedia’s Counter-Strike section covers CS2 and earlier competitive history, including tournaments, teams, players, maps, results, rankings, and roster moves. It is a strong source for event research and tracking the long-running professional Counter-Strike ecosystem.
 
 
 **Best for:** Tournament results, rosters, player pages, map pools, rankings, and competitive history.
 
-### 107. [Liquipedia League of Legends Wiki](https://liquipedia.net/leagueoflegends/Main_Page)
+### 108. [Liquipedia League of Legends Wiki](https://liquipedia.net/leagueoflegends/Main_Page)
 
 **Description:** Liquipedia’s League of Legends section focuses on professional tournaments, regional leagues, teams, players, transfers, champions in competitive context, and match results. It complements the official gameplay wiki by concentrating on esports structure and history.
 
 
 **Best for:** Regional leagues, Worlds history, team rosters, player profiles, transfers, and match results.
 
-### 108. [Liquipedia VALORANT Wiki](https://liquipedia.net/valorant/Main_Page)
+### 109. [Liquipedia VALORANT Wiki](https://liquipedia.net/valorant/Main_Page)
 
 **Description:** Liquipedia’s VALORANT section tracks tournaments, agents in competitive contexts, teams, players, match results, regional circuits, and roster movement. It is useful for following a fast-changing esport where team lineups and regional qualification paths matter.
 
 
 **Best for:** VCT events, teams, players, match results, roster moves, and regional coverage.
 
-### 109. [Liquipedia Rocket League Wiki](https://liquipedia.net/rocketleague/Main_Page)
+### 110. [Liquipedia Rocket League Wiki](https://liquipedia.net/rocketleague/Main_Page)
 
 **Description:** Liquipedia’s Rocket League section documents tournaments, teams, players, results, transfers, and competitive seasons. It is useful for fans who want clean bracket information, historical placements, and context around regional and international Rocket League competition.
 
 
 **Best for:** Tournament brackets, teams, players, RLCS history, transfers, and regional results.
 
-### 110. [Liquipedia StarCraft II Wiki](https://liquipedia.net/starcraft2/Main_Page)
+### 111. [Liquipedia StarCraft II Wiki](https://liquipedia.net/starcraft2/Main_Page)
 
 **Description:** Liquipedia’s StarCraft II section is a deep esports reference for tournaments, players, teams, maps, matchups, races, builds, and competitive history. It is especially valuable because StarCraft has a long professional timeline and a rich strategic vocabulary.
 
 
 **Best for:** Tournament history, player profiles, builds, maps, matchups, and competitive statistics.
 
-### 111. [Liquipedia Overwatch Wiki](https://liquipedia.net/overwatch/Main_Page)
+### 112. [Liquipedia Overwatch Wiki](https://liquipedia.net/overwatch/Main_Page)
 
 **Description:** Liquipedia’s Overwatch section covers tournaments, teams, players, transfers, heroes in competitive context, match results, and historical league information. It is useful for tracking roster movement and understanding the structure of professional Overwatch events.
 
 
 **Best for:** Teams, players, match results, tournament formats, roster moves, and event history.
 
-### 112. [Liquipedia Rainbow Six Wiki](https://liquipedia.net/rainbowsix/Main_Page)
+### 113. [Liquipedia Rainbow Six Wiki](https://liquipedia.net/rainbowsix/Main_Page)
 
 **Description:** Liquipedia’s Rainbow Six section documents Siege tournaments, players, teams, operators in competitive settings, match results, and regional circuits. It is useful for understanding a tactical esport where map pools, regional leagues, and roster changes shape results.
 
 
 **Best for:** Tournament coverage, rosters, players, maps, regional leagues, and match histories.
 
-### 113. [Liquipedia Apex Legends Wiki](https://liquipedia.net/apexlegends/Main_Page)
+### 114. [Liquipedia Apex Legends Wiki](https://liquipedia.net/apexlegends/Main_Page)
 
 **Description:** Liquipedia’s Apex Legends section covers tournaments, teams, players, legends in competitive context, match results, formats, and regional standings. It is useful for following battle royale competition where placement points, rosters, and LAN qualification paths can be complex.
 
@@ -1091,14 +1101,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Competitive MOBA gameplay reference
 
-### 114. [League of Legends Wiki](https://wiki.leagueoflegends.com/en-us/)
+### 115. [League of Legends Wiki](https://wiki.leagueoflegends.com/en-us/)
 
 **Description:** The official League of Legends wiki provides player-authored information on champions, abilities, items, runes, skins, maps, mechanics, game modes, patch-to-patch changes, and lore. It is the gameplay-focused counterpart to esports databases and is useful for exact mechanics and historical changes.
 
 
 **Best for:** Champion abilities, items, runes, skins, mechanics, patches, and lore reference.
 
-### 115. [Dota 2 Wiki](https://dota2.fandom.com/wiki/Dota_2_Wiki)
+### 116. [Dota 2 Wiki](https://dota2.fandom.com/wiki/Dota_2_Wiki)
 
 **Description:** A community wiki for Dota 2 heroes, abilities, items, neutral items, mechanics, game modes, cosmetics, patches, and terminology. It is useful for players checking exact interactions in a complex MOBA with many edge cases and frequent balance changes.
 
@@ -1108,7 +1118,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Competitive and class-based FPS reference
 
-### 116. [Official Team Fortress Wiki](https://wiki.teamfortress.com/wiki/Main_Page)
+### 117. [Official Team Fortress Wiki](https://wiki.teamfortress.com/wiki/Main_Page)
 
 **Description:** The official Team Fortress wiki for Team Fortress and Team Fortress 2, covering classes, weapons, items, maps, updates, cosmetics, achievements, mechanics, and community content. It is useful for both gameplay reference and the unusual economy/cosmetic history around TF2.
 
@@ -1118,7 +1128,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Tactical FPS gameplay reference
 
-### 117. [VALORANT Wiki](https://valorant.fandom.com/wiki/VALORANT_Wiki)
+### 118. [VALORANT Wiki](https://valorant.fandom.com/wiki/VALORANT_Wiki)
 
 **Description:** A community wiki for VALORANT agents, abilities, weapons, maps, skins, game modes, cosmetics, battle passes, and patches. It complements esports resources by focusing on the gameplay objects and cosmetic systems players encounter directly.
 
@@ -1128,14 +1138,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Gacha, mobile, and live-service RPGs
 
-### 118. [Genshin Impact Wiki](https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki)
+### 119. [Genshin Impact Wiki](https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki)
 
 **Description:** A community wiki for Genshin Impact characters, weapons, artifacts, quests, events, enemies, regions, materials, achievements, and lore. It is useful for tracking a content-rich live-service RPG where character builds and material farming require careful planning.
 
 
 **Best for:** Character materials, artifact sets, quests, events, regions, achievements, and lore.
 
-### 119. [Honkai: Star Rail Wiki](https://honkai-star-rail.fandom.com/wiki/Honkai:_Star_Rail_Wiki)
+### 120. [Honkai: Star Rail Wiki](https://honkai-star-rail.fandom.com/wiki/Honkai:_Star_Rail_Wiki)
 
 **Description:** A community wiki for Honkai: Star Rail characters, light cones, relics, missions, events, enemies, worlds, achievements, and story terminology. It is practical for build planning and for tracking live-service events and resource requirements across patches.
 
@@ -1145,14 +1155,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Gacha, mobile, and live-service action RPGs
 
-### 120. [Zenless Zone Zero Wiki](https://zenless-zone-zero.fandom.com/wiki/Zenless_Zone_Zero_Wiki)
+### 121. [Zenless Zone Zero Wiki](https://zenless-zone-zero.fandom.com/wiki/Zenless_Zone_Zero_Wiki)
 
 **Description:** A community wiki for Zenless Zone Zero agents, W-Engines, Drive Discs, Bangboo, factions, missions, events, enemies, and combat systems. It is useful for players comparing character roles, build components, and the terminology of New Eridu.
 
 
 **Best for:** Agents, W-Engines, Drive Discs, Bangboo, missions, events, and combat mechanics.
 
-### 121. [Wuthering Waves Wiki](https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki)
+### 122. [Wuthering Waves Wiki](https://wutheringwaves.fandom.com/wiki/Wuthering_Waves_Wiki)
 
 **Description:** A community wiki for Wuthering Waves resonators, weapons, echoes, quests, events, regions, enemies, materials, and combat systems. It is useful for planning character progression and understanding the echo-based build structure at the center of the game.
 
@@ -1162,14 +1172,14 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Gacha, mobile, and tactical RPGs
 
-### 122. [Arknights Terra Wiki](https://arknights.wiki.gg/)
+### 123. [Arknights Terra Wiki](https://arknights.wiki.gg/)
 
 **Description:** A wiki.gg-hosted reference for Arknights operators, skills, modules, stages, enemies, events, materials, base systems, and story/lore. It is valuable for tactical planning because operator roles, upgrade materials, and event stages all benefit from clear data.
 
 
 **Best for:** Operator data, skills, modules, stages, enemies, materials, and event planning.
 
-### 123. [Blue Archive Wiki](https://bluearchive.wiki/wiki/Main_Page)
+### 124. [Blue Archive Wiki](https://bluearchive.wiki/wiki/Main_Page)
 
 **Description:** A community wiki for Blue Archive students, skills, equipment, stages, raids, events, story, enemies, and progression systems. It is useful for comparing student roles, planning upgrades, and understanding event rewards in a character-collection structure.
 
@@ -1179,7 +1189,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Gacha, mobile, and fleet collection
 
-### 124. [Azur Lane Wiki](https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki)
+### 125. [Azur Lane Wiki](https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki)
 
 **Description:** A dedicated Azur Lane wiki for ships, equipment, maps, events, commissions, skins, retrofit data, construction pools, and mechanics. It is useful for fleet planning, event farming, and understanding ship roles across a large character roster.
 
@@ -1189,7 +1199,7 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 ## Gacha, mobile, and RPG reference
 
-### 125. [Granblue Fantasy Wiki](https://gbf.wiki/)
+### 126. [Granblue Fantasy Wiki](https://gbf.wiki/)
 
 **Description:** A community wiki for Granblue Fantasy characters, weapons, summons, raids, events, classes, quests, grids, and mechanics. It is valuable because the game’s team-building and weapon-grid systems reward detailed reference work and long-term resource planning.
 
