@@ -1235,3 +1235,7 @@ A curated, English-language collection of 126 game wiki, database, guide, and co
 ## Short README Blurb
 
 A curated list of game wikis, databases, esports references, modding documentation, and community knowledge hubs for players, editors, researchers, and guide writers.
+
+## Companion Resources (Fan-Maintained)
+
+- [Meccha Chameleon Atlas](https://mecchachameleon.art/) — Fan-maintained hide-spots reference, paint-match notes, and seeker counter-tips for the paint-based hide-and-seek game Meccha Chameleon. Unofficial, not affiliated with the developer.
