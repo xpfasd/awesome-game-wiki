@@ -1,6 +1,6 @@
 # Awesome Game Wiki
 
-A curated, English-language collection of 126 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
+A curated, English-language collection of 127 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
 
 **Last reviewed:** 2026-05-14  
 
@@ -1205,6 +1205,16 @@ A curated, English-language collection of 126 game wiki, database, guide, and co
 
 
 **Best for:** Characters, weapon grids, raids, events, classes, summons, and progression planning.
+
+
+## Big Walk puzzle, map, and achievement reference
+
+### 127. [Big Walk Guide](https://thebigwalk.world/en)
+
+**Description:** An independent, bilingual (Chinese and English) guide site for the co-op game *Big Walk*, built around primary-source data rather than rewritten prose. It publishes walkthroughs for roughly two dozen individual puzzles, a map with coordinates, a gear-and-slots reference, official patch history, a player-rules FAQ, and an achievements page listing all twelve Steam achievement completion rates taken from Valve's public statistics endpoint with the date they were read. Its sources page grades each source tier and states what each is and is not used for — including that press coverage is never used for a coordinate, a solution, or a number. It is useful for players stuck on a specific puzzle, groups planning a session, and anyone checking how far the player base actually gets.
+
+
+**Best for:** Puzzle walkthroughs, map coordinates, achievement completion rates, patch history, and player-rules FAQs for a co-op campaign.
 
 
 ---
