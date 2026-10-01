@@ -1,6 +1,6 @@
 # Awesome Game Wiki
 
-A curated, English-language collection of 126 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
+A curated, English-language collection of 127 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
 
 **Last reviewed:** 2026-05-14  
 
@@ -1205,6 +1205,16 @@ A curated, English-language collection of 126 game wiki, database, guide, and co
 
 
 **Best for:** Characters, weapon grids, raids, events, classes, summons, and progression planning.
+
+
+## Co-op simulation guide hub
+
+### 127. [Scam With Your Friends Guide](https://scamwithyourfriends.net/)
+
+**Description:** An unofficial fan guide to the Steam co-op game Scam With Your Friends, covering the Early Access window, playtest access, system requirements, how a workday and the daily quota work, AI callers, and the scams and desktop apps seen in official screenshots. Each page cites the Steam store page or the developers' own posts, marks screenshot-derived details as such, and shows the date it was last verified.
+
+
+**Best for:** Release and playtest status, PC requirements, a first-shift walkthrough, and checking what is and is not officially confirmed.
 
 
 ---
