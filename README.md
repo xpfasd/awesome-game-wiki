@@ -1,6 +1,6 @@
 # Awesome Game Wiki
 
-A curated, English-language collection of 126 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
+A curated, English-language collection of 127 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
 
 **Last reviewed:** 2026-05-14  
 
@@ -1205,6 +1205,16 @@ A curated, English-language collection of 126 game wiki, database, guide, and co
 
 
 **Best for:** Characters, weapon grids, raids, events, classes, summons, and progression planning.
+
+
+## Zoo management simulation reference
+
+### 127. [PZ2 Tools](https://pz2tools.wiki/)
+
+**Description:** An independent reference site for the zoo management sim *Planet Zoo 2* (PC, PS5, Xbox Series X|S; releases 2026-10-13), built around the game's own launch data rather than rewritten prose. It publishes the full launch roster of 130 species with biome, continent, enclosure type, class, conservation status, size, weight and barrier grade; a co-habitation chart covering 1221 species pairs that share a biome and an enclosure type, split into 376 pairs where the official text calls both sides social, 106 that need a judgement call, and 739 ruled out, with every row quoting the sentence of the in-game Social & Reproduction text it rests on and linking back to the source page; a release page with unlock times by timezone and a standard versus Deluxe edition comparison; and a system requirements page that states the official PC minimums and answers the common GPU questions directly. The animal table behind the site is also published as a JSON-LD Dataset under CC BY 4.0 with a DOI and a public GitHub repository, so the numbers can be re-checked rather than taken on trust.
+
+
+**Best for:** Checking which animals can share an enclosure before building, filtering the launch species list, release and unlock times, edition differences, and PC requirements.
 
 
 ---
