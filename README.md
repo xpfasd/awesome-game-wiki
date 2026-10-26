@@ -1,6 +1,6 @@
 # Awesome Game Wiki
 
-A curated, English-language collection of 126 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
+A curated, English-language collection of 127 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
 
 **Last reviewed:** 2026-05-14  
 
@@ -1208,6 +1208,16 @@ A curated, English-language collection of 126 game wiki, database, guide, and co
 
 
 ---
+
+
+## Adventure, fishing, and restaurant management
+
+### 127. [Dave the Diver Wiki](https://davethediver.net/)
+
+**Description:** An independent, bilingual (English and Simplified Chinese) reference database for DAVE THE DIVER. It catalogs 477 fish and seafood entries with catch locations, active time, rank and sell values; 741 recipes with ingredient lists (cost and profit estimates on many pages); 104 missions with walkthrough sections; 16 bosses; and characters, staff, weapons, items, ingredients, locations, DLCs and achievements. A small set of browser tools (recipe profit planner, staff comparison, weapon upgrade comparison and a fish-card collection tracker) supports in-game planning. Pages list their sources and note updates for official game versions.
+
+
+**Best for:** Fish locations and sell values, recipe profit planning, mission walkthroughs, boss strategies, staff and weapon comparisons, and collection tracking.
 
 
 ## Source and Verification Notes
