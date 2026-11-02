@@ -1,6 +1,6 @@
 # Awesome Game Wiki
 
-A curated, English-language collection of 125 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
+A curated, English-language collection of 126 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
 
 **Last reviewed:** 2026-05-14  
 
@@ -1198,6 +1198,17 @@ A curated, English-language collection of 125 game wiki, database, guide, and co
 
 
 ---
+
+
+
+## Action RPG fan guide wiki
+
+### 126. [Phantom Blade Guides](https://phantombladeguides.com/)
+
+**Description:** An independent English fan guide wiki for Phantom Blade Zero (影之刃零), with filterable weapons and bosses tables, Sha-Chi combat notes, beginner HowTos, and launch-week updates. It is useful for players who want structured reference pages without a login wall, and it marks uncertain combat data as Unverified rather than inventing full databases.
+
+
+**Best for:** Weapons tables, boss tips, Sha-Chi notes, beginner HowTos, and Phantom Blade Zero launch reference.
 
 
 ## Source and Verification Notes
