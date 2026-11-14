@@ -1,6 +1,6 @@
 # Awesome Game Wiki
 
-A curated, English-language collection of 126 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
+A curated, English-language collection of 127 game wiki, database, guide, and community knowledge websites. This document is written in an "awesome list" style, but with fuller descriptions so each entry explains what the site is best used for.
 
 **Last reviewed:** 2026-05-14  
 
@@ -1205,6 +1205,14 @@ A curated, English-language collection of 126 game wiki, database, guide, and co
 
 
 **Best for:** Characters, weapon grids, raids, events, classes, summons, and progression planning.
+
+
+## Multiplayer survival and co-op guide
+### 127. [ROB RUN Wiki](https://www.robrun-game.com/)
+
+**Description:** An independent fan guide for Kefir's ROB RUN on Steam. It covers getting started, joining friends or moving between servers, and which kinds of progress are affected by a wipe.
+
+**Best for:** First-session walkthroughs, server changes, and wipe preparation.
 
 
 ---
